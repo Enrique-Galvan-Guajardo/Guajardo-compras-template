@@ -23,6 +23,10 @@ body{
     font-style: italic;
     font-display: swap;
 }
+.nav-store-title{
+    border-bottom: 1px solid orange !important;
+    line-height: 18px;
+}
 h1.title, h2.title, h3.title, h4.title, h5.title, h6.title{
     font-family: 'Futura Bold Italic', sans-serif;
     color: darkblue;
@@ -54,5 +58,4 @@ margin-left: auto;
 .nav-title{
     line-height: 2rem;
 }
-
 /*Time updated: 16/05/2023 6:05 p.m.*/
