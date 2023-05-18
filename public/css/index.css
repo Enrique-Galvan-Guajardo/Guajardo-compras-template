@@ -61,5 +61,6 @@ margin-left: auto;
 
 a.nav-link.dropdown-toggle::after{
     margin-left: auto;
+    transform: scale(1.6);
 }
 /*Time updated: 17/05/2023 4:19 p.m.*/
