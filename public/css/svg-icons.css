@@ -1,0 +1,580 @@
+.icon-sm {
+    width: 2rem;
+    height: 2rem;
+}
+.icon-md {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.icon-lg {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+.icon-xl {
+    width: 3rem;
+    height: 3rem;
+}
+svg.icon-sm,svg.icon-md,svg.icon-lg,svg.icon-xl{
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.aceite {
+    background-image: url('./Pack_Iconos_SVG/icons8-aceite-de-oliva-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.aceite-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-aceite-de-oliva-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.bolsa-de-la-compra {
+    background-image: url('./Pack_Iconos_SVG/icons8-bolsa-de-la-compra-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.bolsa-de-la-compra-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-bolsa-de-la-compra-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pan-de-molde {
+    background-image: url('./Pack_Iconos_SVG/icons8-bread-loaf-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pan-de-molde-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-bread-loaf-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.brócoli {
+    background-image: url('./Pack_Iconos_SVG/icons8-brócoli-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.brócoli-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-brócoli-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cangrejo {
+    background-image: url('./Pack_Iconos_SVG/icons8-cangrejo-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cangrejo-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cangrejo-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.caramelo {
+    background-image: url('./Pack_Iconos_SVG/icons8-caramelo-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.caramelo-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-caramelo-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cartón-de-leche {
+    background-image: url('./Pack_Iconos_SVG/icons8-cartón-de-leche-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cartón-de-leche-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cartón-de-leche-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cebolla {
+    background-image: url('./Pack_Iconos_SVG/icons8-cebolla-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cebolla-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cebolla-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cereza {
+    background-image: url('./Pack_Iconos_SVG/icons8-cereza-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cereza-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cereza-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.chocolate {
+    background-image: url('./Pack_Iconos_SVG/icons8-chocolatina-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.chocolate-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-chocolatina-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.limón {
+    background-image: url('./Pack_Iconos_SVG/icons8-cítricos-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.limón-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cítricos-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.coco {
+    background-image: url('./Pack_Iconos_SVG/icons8-coco-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.coco-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-coco-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.café {
+    background-image: url('./Pack_Iconos_SVG/icons8-coffee-beans-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.café-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-coffee-beans-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.col {
+    background-image: url('./Pack_Iconos_SVG/icons8-col-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.col-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-col-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.refresco {
+    background-image: url('./Pack_Iconos_SVG/icons8-cola-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.refresco-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cola-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.coliflor {
+    background-image: url('./Pack_Iconos_SVG/icons8-coliflor-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.coliflor-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-coliflor-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.bolsa {
+    background-image: url('./Pack_Iconos_SVG/icons8-comida-para-llevar-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.bolsa-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-comida-para-llevar-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pez {
+    background-image: url('./Pack_Iconos_SVG/icons8-comida-para-pez-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pez-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-comida-para-pez-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.comida-y-vino {
+    background-image: url('./Pack_Iconos_SVG/icons8-comida-y-vino-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.comida-y-vino-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-comida-y-vino-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.recetario {
+    background-image: url('./Pack_Iconos_SVG/icons8-cookbook-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.recetario-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cookbook-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.azúcar {
+    background-image: url('./Pack_Iconos_SVG/icons8-cuchara-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.azúcar-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cuchara-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.helado {
+    background-image: url('./Pack_Iconos_SVG/icons8-cucurucho-de-helado-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.helado-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cucurucho-de-helado-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cupcake {
+    background-image: url('./Pack_Iconos_SVG/icons8-cupcake-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.cupcake-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-cupcake-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.dona {
+    background-image: url('./Pack_Iconos_SVG/icons8-donut-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.dona-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-donut-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.ensalada {
+    background-image: url('./Pack_Iconos_SVG/icons8-ensalada-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.ensalada-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-ensalada-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.fideos {
+    background-image: url('./Pack_Iconos_SVG/icons8-fideos-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.fideos-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-fideos-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.carne {
+    background-image: url('./Pack_Iconos_SVG/icons8-filete-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.carne-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-filete-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.fresa {
+    background-image: url('./Pack_Iconos_SVG/icons8-fresa-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.fresa-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-fresa-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.fruta {
+    background-image: url('./Pack_Iconos_SVG/icons8-fruit-bag-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.fruta-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-fruit-bag-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.galletas {
+    background-image: url('./Pack_Iconos_SVG/icons8-galletas-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.galletas-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-galletas-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.gelatina {
+    background-image: url('./Pack_Iconos_SVG/icons8-gelatina-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.gelatina-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-gelatina-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.huevos {
+    background-image: url('./Pack_Iconos_SVG/icons8-huevos-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.huevos-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-huevos-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.ingredientes {
+    background-image: url('./Pack_Iconos_SVG/icons8-ingredientes-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.ingredientes-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-ingredientes-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.kétchup {
+    background-image: url('./Pack_Iconos_SVG/icons8-kétchup-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.kétchup-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-kétchup-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.camarón {
+    background-image: url('./Pack_Iconos_SVG/icons8-langostino-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.camarón-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-langostino-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.lata {
+    background-image: url('./Pack_Iconos_SVG/icons8-lata-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.lata-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-lata-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.lista-de-ingredientes {
+    background-image: url('./Pack_Iconos_SVG/icons8-lista-de-ingredientes-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.lista-de-ingredientes-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-lista-de-ingredientes-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.maíz {
+    background-image: url('./Pack_Iconos_SVG/icons8-maíz-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.maíz-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-maíz-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mango {
+    background-image: url('./Pack_Iconos_SVG/icons8-mango-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mango-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-mango-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mayonesa {
+    background-image: url('./Pack_Iconos_SVG/icons8-mayonesa-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mayonesa-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-mayonesa-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.melón {
+    background-image: url('./Pack_Iconos_SVG/icons8-melón-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.melón-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-melón-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mermelada {
+    background-image: url('./Pack_Iconos_SVG/icons8-mermelada-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mermelada-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-mermelada-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mostaza {
+    background-image: url('./Pack_Iconos_SVG/icons8-mostaza-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.mostaza-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-mostaza-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.galleta {
+    background-image: url('./Pack_Iconos_SVG/icons8-naan-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.galleta-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-naan-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.naranja {
+    background-image: url('./Pack_Iconos_SVG/icons8-naranja-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.naranja-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-naranja-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.canela {
+    background-image: url('./Pack_Iconos_SVG/icons8-palitos-de-canela-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.canela-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-palitos-de-canela-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pan {
+    background-image: url('./Pack_Iconos_SVG/icons8-pan-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pan-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-pan-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.panqueque {
+    background-image: url('./Pack_Iconos_SVG/icons8-panqueque-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.panqueque-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-panqueque-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pastel {
+    background-image: url('./Pack_Iconos_SVG/icons8-pastel-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pastel-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-pastel-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pay {
+    background-image: url('./Pack_Iconos_SVG/icons8-pay-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pay-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-pay-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pollo {
+    background-image: url('./Pack_Iconos_SVG/icons8-pierna-de-aves-de-corral-rellenadas-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pollo-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-pierna-de-aves-de-corral-rellenadas-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.plátano {
+    background-image: url('./Pack_Iconos_SVG/icons8-plátano-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.plátano-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-plátano-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pulpo {
+    background-image: url('./Pack_Iconos_SVG/icons8-pulpo-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pulpo-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-pulpo-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.queso {
+    background-image: url('./Pack_Iconos_SVG/icons8-queso-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.queso-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-queso-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.harina {
+    background-image: url('./Pack_Iconos_SVG/icons8-saco-de-harina-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.harina-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-saco-de-harina-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pizza {
+    background-image: url('./Pack_Iconos_SVG/icons8-salami-pizza-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pizza-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-salami-pizza-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.salchicha {
+    background-image: url('./Pack_Iconos_SVG/icons8-salchicha-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.salchicha-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-salchicha-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.salero {
+    background-image: url('./Pack_Iconos_SVG/icons8-salero-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.salero-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-salero-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.aderezo {
+    background-image: url('./Pack_Iconos_SVG/icons8-salsa-worcestershire-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.aderezo-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-salsa-worcestershire-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.sandía {
+    background-image: url('./Pack_Iconos_SVG/icons8-sandía-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.sandía-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-sandía-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.seta {
+    background-image: url('./Pack_Iconos_SVG/icons8-seta-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.seta-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-seta-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.sopa {
+    background-image: url('./Pack_Iconos_SVG/icons8-soup-plate-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.sopa-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-soup-plate-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.espinaca {
+    background-image: url('./Pack_Iconos_SVG/icons8-spinach-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.espinaca-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-spinach-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.vino {
+    background-image: url('./Pack_Iconos_SVG/icons8-the-toast-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.vino-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-the-toast-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.tomillo {
+    background-image: url('./Pack_Iconos_SVG/icons8-thyme-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.tomillo-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-thyme-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.tomate {
+    background-image: url('./Pack_Iconos_SVG/icons8-tomate-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.tomate-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-tomate-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.uvas {
+    background-image: url('./Pack_Iconos_SVG/icons8-uvas-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.uvas-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-uvas-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.yogur {
+    background-image: url('./Pack_Iconos_SVG/icons8-yogur-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.yogur-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-yogur-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.zanahoria {
+    background-image: url('./Pack_Iconos_SVG/icons8-zanahoria-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.zanahoria-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-zanahoria-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.jugo-de-naranja {
+    background-image: url('./Pack_Iconos_SVG/icons8-zumo-de-naranja-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.jugo-de-naranja-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-zumo-de-naranja-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}

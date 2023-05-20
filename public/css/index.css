@@ -3,6 +3,8 @@
 /*@import "../css/bootstrap-4.5.3/dist/css/bootstrap.min.css";*/
 /*@import "./bootstrap4_5.css";*/
 
+@import "./svg-icons.css";
+
 body{
     font-family: 'Hind', sans-serif;
     background-color: whitesmoke;
