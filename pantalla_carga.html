@@ -17,23 +17,143 @@
     <script src="https://kit.fontawesome.com/89ee7a970b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
+    <div class="loading-page">
         <div>
             <div>
-                <div>Título</div>
-                <div>Producto</div>
+                <div class="item-basket">
+                    <svg class="icon-xl2 tomate-hd"></svg>
+                </div>
+                <h3 class="m-0 text-capitalize">Tomate</h3>
             </div>
             <div>
-                <div>
-                    <svg class="icon-sm aceite"></svg>
-                    <svg class="icon-md aceite"></svg>
-                    <svg class="icon-lg aceite"></svg>
-                    <svg class="icon-xl aceite"></svg>
+                <div class="basket">
+                    <svg class="icon-xl2 cesta-hd"></svg>
                 </div>
-                <div>Barra de carga</div>
-                <div>Comentario</div>
+                <p class="text-info font-weight-bold my-3 basket-points">100</p>
+                <h6 class="text-muted">Cargando...</h6>
             </div>
         </div>
     </div>
+
+    <script>
+        const item_basket = document.querySelector('.item-basket');
+        const basket_points = document.querySelectorAll('.basket-points');
+        const basket = document.querySelector('.basket');
+        const icons_array = [
+            { nombre: 'tomate', extension: '-hd' },
+            { nombre: 'coco', extension: '-hd' },
+            { nombre: 'naranja', extension: '-hd' },
+            { nombre: 'sandía', extension: '-hd' },
+            { nombre: 'limón', extension: '-hd' },
+            { nombre: 'melón', extension: '-hd' },
+            { nombre: 'galleta', extension: '-hd' },
+            { nombre: 'pastel', extension: '-hd' },
+            { nombre: 'uvas', extension: '-hd' },
+            { nombre: 'pollo', extension: '-hd' },
+            { nombre: 'salchicha', extension: '-hd' },
+            { nombre: 'refresco', extension: '-hd' },
+            { nombre: 'azucar', extension: '-hd' },
+            { nombre: 'zanahoria', extension: '-hd' },
+            { nombre: 'huevos', extension: '-hd' },
+            { nombre: 'carne', extension: '-hd' },
+            { nombre: 'helado', extension: '-hd' }
+        ];
+        
+        function item_fall_action() {
+            // Activa la animación al ingresar la clase que la contiene
+            item_basket.classList.toggle('item-basket-fall');
+            add_random_rotation();
+        }
+
+        function item_change() {
+            // Generar un índice aleatorio basado en la longitud del icons_array
+            let random_number = Math.floor(Math.random() * icons_array.length);
+    
+            // Obtener el objeto aleatorio usando el índice generado
+            let random_item = icons_array[random_number];
+            
+            // retornar el objeto del nuevo elemento
+            return random_item;
+        }
+
+        function check_positions() {
+            let i = 0;
+            // Obtiene las dimensiones y coordenadas del elemento itemBasket
+            let rectItemBasket = item_basket.getBoundingClientRect();
+                
+            let itemBasketTop = rectItemBasket.top;
+            let itemBasketLeft = rectItemBasket.left;
+            let itemBasketRight = rectItemBasket.right;
+            let itemBasketBottom = rectItemBasket.bottom;
+            // Obtiene las dimensiones y coordenadas del elemento basket
+            let rectBasket = basket.getBoundingClientRect();
+            let basketTop = rectBasket.top;
+            let basketLeft = rectBasket.left;
+            let basketRight = rectBasket.right;
+            let basketBottom = rectBasket.bottom;
+            // Verifica si el elemento itemBasket está dentro del elemento basket
+            let estaDentro = itemBasketTop >= basketTop && itemBasketLeft >= basketLeft && itemBasketRight <= basketRight && itemBasketBottom <= basketBottom;
+                
+            if (estaDentro) {
+                i++;
+                basket.classList.add('basketed');
+                setTimeout(function () {
+                    basket.classList.remove('basketed');
+                }, 200)
+            }
+            return i;
+        }
+        
+        function get_points() {
+            // Aumenta 100 puntos
+            return basket_points[0].innerHTML = parseInt(basket_points[0].innerHTML) + 100;
+        }
+
+        item_basket.addEventListener('click', function() {
+            if (!item_basket.classList.contains('item-basket-fall')){
+                // Ejecuta la función que ingresa la clase con animación
+                item_fall_action();
+                let times_in = 0;
+                
+                // Repetir la ejecución de la función cada .1 segundos (100 milisegundos)
+                let check_interval = setInterval(() => {
+                    // Imprimirá el valor retornado por miFuncion
+                    times_in += check_positions()
+                    
+                }, 100);
+                              
+                setTimeout(function () {
+                    // Ejecuta la función que remueve la clase con animación
+                    item_fall_action();
+                    
+                    // Ejecuta la función que genera aleatoriamente otro producto
+                    let new_item = item_change();
+                    item_basket.children[0].classList.replace( item_basket.children[0].classList[1], new_item.nombre + new_item.extension);
+                    item_basket.parentNode.children[1].innerText = new_item.nombre;
+                            
+                    delete_rotation();
+                    // Detener la ejecución después de 2 segundos (por ejemplo), finalizar la ejecución de la función setInterval
+                    clearInterval(check_interval); 
+                    if (times_in > 0) {
+                        // Ejecuta la función que aumenta puntos
+                        get_points();
+                    }    
+                }, 2000); 
+            }
+        });
+
+        function add_random_rotation() {
+            // Generar un índice aleatorio basado en la longitud del array
+            let random_number = Math.floor(Math.random() * 361);
+            
+            // Se forma el valor en el que girará el elemento
+            item_basket.style.rotate = random_number+'deg';
+        }
+        
+        function delete_rotation() {
+            // Se elimina el valor en el que giró el elemento
+            item_basket.style.removeProperty('rotate');
+        }
+    </script>
 </body>
 </html>

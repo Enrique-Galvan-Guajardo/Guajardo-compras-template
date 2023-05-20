@@ -1,0 +1,88 @@
+.loading-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-page > div{
+    text-align: center;
+}
+.loading-page > div > div > div,.loading-page > div > div:nth-child(1){
+    position: relative;
+}
+.loading-page > div > div:nth-child(1) {
+    bottom: 100px;
+}
+.loading-page > div > div > div.item-basket {
+    width: min-content;
+    margin-inline: auto;
+    transition: transform 1s ease, rotate 1s ease-out;
+}
+.loading-page > div > div > div.item-basket-fall{
+    animation-name: item-fall-in-basket;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(.6);
+}
+.loading-page > div > div > div:not(.item-basket-fall){
+    transform: scale(1);
+}
+.loading-page > div > div > div.basket{
+    animation-name: basket-slide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: transform .2s ease, border .2s ease;
+    
+    border-radius: 50%;
+    padding: 1rem;
+    border-inline-width: 1rem;
+    border-inline-style: dashed;
+    border-inline-color: transparent;
+    border-block-color: transparent;
+    border-block-style: solid;
+    border-block-width: 1rem;
+}
+.loading-page > div > div > div.basketed{
+    transform: scale(1.1);
+    border-radius: 50%;
+    padding: 1rem;
+    border-inline-width: 1rem;
+    border-inline-style: dashed;
+    border-inline-color: gold;
+    border-block-color: transparent;
+    border-block-style: solid;
+    border-block-width: 1rem;
+}
+.loading-page > div > div > p.basket-points::after{
+content: ' puntos';
+}
+@keyframes item-fall-in-basket {
+    from{
+        bottom: 0px;
+        opacity: 1;
+    }
+    to{
+        bottom: -280px;
+        opacity: 0.4;
+    }
+}
+@keyframes basket-slide {
+    0%{
+        right: 0%;
+    }
+    25%{
+        right: 25vw;
+        rotate: 8deg;
+    }
+    75%{
+        right: -25vw;
+        rotate: -8deg;
+    }
+    100%{
+        right: 0%;
+    }
+}
