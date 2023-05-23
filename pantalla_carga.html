@@ -30,6 +30,9 @@
                     <svg class="icon-xl2 cesta-hd"></svg>
                 </div>
                 <p class="text-info font-weight-bold my-3 basket-points">100</p>
+                <div class="mx-2 mb-4">
+                    <small class="text-muted">¡Usa la tecla <kbd>R</kbd> para cambiar el producto, y la tecla <kbd>Space</kbd> para dejarlo caer!</small>
+                </div>
                 <h6 class="text-muted">Cargando...</h6>
             </div>
         </div>
@@ -52,7 +55,7 @@
             { nombre: 'pollo', extension: '-hd' },
             { nombre: 'salchicha', extension: '-hd' },
             { nombre: 'refresco', extension: '-hd' },
-            { nombre: 'azucar', extension: '-hd' },
+            { nombre: 'azúcar', extension: '-hd' },
             { nombre: 'zanahoria', extension: '-hd' },
             { nombre: 'huevos', extension: '-hd' },
             { nombre: 'carne', extension: '-hd' },
@@ -62,18 +65,18 @@
         function item_fall_action() {
             // Activa la animación al ingresar la clase que la contiene
             item_basket.classList.toggle('item-basket-fall');
-            add_random_rotation();
+            add_random_rotation(item_basket);
         }
 
-        function item_change() {
+        function item_change(element) {
             // Generar un índice aleatorio basado en la longitud del icons_array
             let random_number = Math.floor(Math.random() * icons_array.length);
     
             // Obtener el objeto aleatorio usando el índice generado
             let random_item = icons_array[random_number];
             
-            // retornar el objeto del nuevo elemento
-            return random_item;
+            element.children[0].classList.replace( item_basket.children[0].classList[1], random_item.nombre + random_item.extension);
+            element.parentNode.children[1].innerText = random_item.nombre;
         }
 
         function check_positions() {
@@ -92,7 +95,10 @@
             let basketRight = rectBasket.right;
             let basketBottom = rectBasket.bottom;
             // Verifica si el elemento itemBasket está dentro del elemento basket
-            let estaDentro = itemBasketTop >= basketTop && itemBasketLeft >= basketLeft && itemBasketRight <= basketRight && itemBasketBottom <= basketBottom;
+            let estaDentro = itemBasketTop >= basketTop &&
+                             itemBasketLeft >= basketLeft &&
+                             itemBasketRight <= basketRight && 
+                             itemBasketBottom <= basketBottom;
                 
             if (estaDentro) {
                 i++;
@@ -110,6 +116,38 @@
         }
 
         item_basket.addEventListener('click', function() {
+            // Llamar a la función de tirar item aquí
+            drop_item();
+        });
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                // Llamar a la función de tirar item aquí
+                drop_item();
+            }
+        });
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'KeyR') {
+                // Llamar a la función de cambiar item aquí
+                item_change(item_basket)
+            }
+        });
+        
+        function add_random_rotation(element) {
+            // Generar un índice aleatorio basado en la longitud del array
+            let random_number = Math.floor(Math.random() * 361);
+            
+            // Se forma el valor en el que girará el elemento
+            element.style.rotate = random_number+'deg';
+        }
+        
+        function delete_rotation(element) {
+            // Se elimina el valor en el que giró el elemento
+            element.style.removeProperty('rotate');
+        }
+        
+        function drop_item() {
             if (!item_basket.classList.contains('item-basket-fall')){
                 // Ejecuta la función que ingresa la clase con animación
                 item_fall_action();
@@ -127,11 +165,9 @@
                     item_fall_action();
                     
                     // Ejecuta la función que genera aleatoriamente otro producto
-                    let new_item = item_change();
-                    item_basket.children[0].classList.replace( item_basket.children[0].classList[1], new_item.nombre + new_item.extension);
-                    item_basket.parentNode.children[1].innerText = new_item.nombre;
+                    item_change(item_basket);
                             
-                    delete_rotation();
+                    delete_rotation(item_basket);
                     // Detener la ejecución después de 2 segundos (por ejemplo), finalizar la ejecución de la función setInterval
                     clearInterval(check_interval); 
                     if (times_in > 0) {
@@ -140,19 +176,6 @@
                     }    
                 }, 2000); 
             }
-        });
-
-        function add_random_rotation() {
-            // Generar un índice aleatorio basado en la longitud del array
-            let random_number = Math.floor(Math.random() * 361);
-            
-            // Se forma el valor en el que girará el elemento
-            item_basket.style.rotate = random_number+'deg';
-        }
-        
-        function delete_rotation() {
-            // Se elimina el valor en el que giró el elemento
-            item_basket.style.removeProperty('rotate');
         }
     </script>
 </body>

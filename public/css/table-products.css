@@ -1,0 +1,27 @@
+.product-card{
+    width: 80vw;
+}
+
+.product-card a.nav-link.dropdown-toggle::after{
+    margin-left: 1rem;
+}
+.family-carnes > th{
+    border-right: 2px solid orangered;
+}
+.family-frutas-y-verduras > th{
+    border-right: 2px solid limegreen;
+}
+
+.family-frutas-y-verduras > td:first-child{
+    overflow: hidden;
+}
+.family-frutas-y-verduras > td:first-child > div {
+    position: relative;
+    right: 100%;
+    transform: scale(.6);
+    opacity: .2;
+    bottom: -25px;
+}
+.family-frutas-y-verduras > td:first-child > div > svg{
+    position: absolute;
+}

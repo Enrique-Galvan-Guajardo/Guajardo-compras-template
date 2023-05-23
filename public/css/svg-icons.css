@@ -70,6 +70,30 @@ svg.icon-sm,svg.icon-md,svg.icon-lg,svg.icon-xl,svg.icon-xl2,svg.icon-xl3,svg.ic
     background-image: url('./Pack_Iconos_SVG/icons8-cangrejo-stickers-96.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }
+.caja {
+    background-image: url('./Pack_Iconos_SVG/icons8-caja-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.caja-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-caja-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.paquete {
+    background-image: url('./Pack_Iconos_SVG/icons8-damaged-parcel-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.paquete-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-damaged-parcel-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.peso-kg {
+    background-image: url('./Pack_Iconos_SVG/icons8-peso-kg-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.peso-kg-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-peso-kg-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
 .caramelo {
     background-image: url('./Pack_Iconos_SVG/icons8-caramelo-stickers-32.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
@@ -191,11 +215,11 @@ svg.icon-sm,svg.icon-md,svg.icon-lg,svg.icon-xl,svg.icon-xl2,svg.icon-xl3,svg.ic
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }
 .azúcar {
-    background-image: url('./Pack_Iconos_SVG/icons8-cuchara-stickers-32.svg');
+    background-image: url('./Pack_Iconos_SVG/icons8-cuchara-de-azúcar-stickers-32.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }
 .azúcar-hd {
-    background-image: url('./Pack_Iconos_SVG/icons8-cuchara-stickers-96.svg');
+    background-image: url('./Pack_Iconos_SVG/icons8-cuchara-de-azúcar-stickers-96.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }
 .helado {

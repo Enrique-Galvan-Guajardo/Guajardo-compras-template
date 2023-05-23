@@ -5,6 +5,7 @@
 
 @import "./svg-icons.css";
 @import "./loading-page.css";
+@import "./table-products.css";
 
 body{
     font-family: 'Hind', sans-serif;
@@ -65,5 +66,10 @@ margin-left: auto;
 a.nav-link.dropdown-toggle::after{
     margin-left: auto;
     transform: scale(1.6);
+}
+
+.test{
+    border: 1px solid red;
+    width: min-content;
 }
 /*Time updated: 17/05/2023 4:19 p.m.*/
