@@ -1,45 +1,62 @@
 .product-card{
     width: 80vw;
 }
-
 .product-card a.nav-link.dropdown-toggle::after{
     margin-left: 1rem;
 }
-.family-frutas-y-verduras > td{
+.family-frutas-y-verduras > td.row-item-id{
     overflow: hidden;
 }
-.family-frutas-y-verduras > td > div {
+.family-frutas-y-verduras > td.row-item-id > div {
     position: relative;
-    left: 0%;
+    right: 20%;
     transform: scale(.6);
     opacity: .2;
     bottom: -25px;
 }
-.family-frutas-y-verduras > td > div > svg{
+.family-frutas-y-verduras > td.row-item-id > div > svg{
     position: absolute;
 }
 
-.row-item-added > th::before{
-    content: 'Listo';
+.row-item-added > th::after{
+    content: 'Añadido';
     font-weight: 500;
-    position: absolute;
-    margin-left: -22px;
-    margin-top: 30px;
+    position: relative;
+    bottom: -13px;
     background-color: darkgreen;
     font-size: small;
     padding: 0 .5rem;
     color: white;
     text-shadow: 0px 0px 5px black;
+    border-radius: 4px 4px 0 0;
 }
-.row-item-added > th::after{
-    content: '';
+.family-frutas-y-verduras > td.row-item-count {
+    overflow: hidden;
+}
+.family-frutas-y-verduras > td.row-item-count > div{
+    width: max-content;
+}
+.family-frutas-y-verduras > td.row-item-count > div > input{
+    width: 5rem;
+    text-align: center;
+}
+.family-frutas-y-verduras > td.row-item-count > div > div > button > div{
+    transform: scale(1.8);
+    height: 1rem;
+    line-height: 1.2rem;
+}
+.family-frutas-y-verduras > td.row-item-count > div:nth-child(2){
+    position: relative;
+    left: 15%;
+    transform: scale(1);
+    bottom: -8px;
+    display: flex;
+    align-items: center;
+}
+.family-frutas-y-verduras > td.row-item-count > div:nth-child(2) > div{
+    margin: 0px 0px 0px 50px;
+}
+.family-frutas-y-verduras > td.row-item-count > div:nth-child(2) > svg{
     position: absolute;
-    margin-left: -28px;
-    margin-top: 50px;
-    width: 0;
-    height: 0;
-    border-right: 0rem solid transparent;
-    border-top: .5rem solid #0e420e;
-    border-left: .5rem solid transparent;
-    border-bottom: 0rem solid transparent;
+    opacity: .2;
 }

@@ -52,8 +52,8 @@
                         </thead>
                         <tbody>
                           <tr class="row-item-added family-frutas-y-verduras">
-                            <th scope="row"><span>1</span></th>
-                            <td>
+                            <th scope="row"><div>1</div></th>
+                            <td class="row-item-id">
                                 <div>
                                     <svg class="icon-xl2 tomate-hd"></svg>
                                 </div>
@@ -61,7 +61,21 @@
                             </td>
                             <td>Frutas y Verduras</td>
                             <td>Verduras</td>
-                            <td>1</td>
+                            <td class="row-item-count">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="0" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades">
+                                <div class="input-group-prepend">
+                                  <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                </div>
+                              </div>
+                              <div class="my-2">
+                                <div>x 0</div>
+                                <svg class="icon-lg caja-hd"></svg>
+                              </div>
+                            </td>
                             <td>Bolsa</td>
                           </tr>
                           <tr class="family-frutas-y-verduras">
