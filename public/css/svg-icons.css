@@ -86,11 +86,19 @@ svg.icon-sm,svg.icon-md,svg.icon-lg,svg.icon-xl,svg.icon-xl2,svg.icon-xl3,svg.ic
     background-image: url('./Pack_Iconos_SVG/icons8-damaged-parcel-stickers-96.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }
-.peso-kg {
+.pieza {
+    background-image: url('./Pack_Iconos_SVG/icons8-producto-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.pieza-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-producto-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.kilogramos {
     background-image: url('./Pack_Iconos_SVG/icons8-peso-kg-stickers-32.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }
-.peso-kg-hd {
+.kilogramos-hd {
     background-image: url('./Pack_Iconos_SVG/icons8-peso-kg-stickers-96.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }

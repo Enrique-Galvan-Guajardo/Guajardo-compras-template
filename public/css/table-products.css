@@ -9,10 +9,10 @@
 }
 .family-frutas-y-verduras > td.row-item-id > div {
     position: relative;
-    right: 20%;
     transform: scale(.6);
     opacity: .2;
-    bottom: -25px;
+    bottom: -20px;
+    width: min-content;
 }
 .family-frutas-y-verduras > td.row-item-id > div > svg{
     position: absolute;
@@ -46,17 +46,31 @@
     line-height: 1.2rem;
 }
 .family-frutas-y-verduras > td.row-item-count > div:nth-child(2){
-    position: relative;
     left: 15%;
     transform: scale(1);
     bottom: -8px;
     display: flex;
     align-items: center;
 }
+.family-frutas-y-verduras > td.show-input > div:nth-child(2){
+    position: relative;
+}
 .family-frutas-y-verduras > td.row-item-count > div:nth-child(2) > div{
     margin: 0px 0px 0px 50px;
 }
 .family-frutas-y-verduras > td.row-item-count > div:nth-child(2) > svg{
     position: absolute;
-    opacity: .2;
+}
+.family-frutas-y-verduras > td.hide-input > div:nth-child(2) > svg{
+    opacity: 1;
+}
+.family-frutas-y-verduras > td.show-input > div:nth-child(2) > svg{
+    opacity: .5;
+}
+.family-frutas-y-verduras > td.hide-input > div:nth-child(1) {
+    display: none;
+}
+.family-frutas-y-verduras > td.hide-input > div:nth-child(2) {
+    position: unset;
+    /*margin-inline: auto;*/
 }
