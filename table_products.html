@@ -44,23 +44,28 @@
                           <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Familia</th>
-                            <th scope="col">Sub Familia</th>
+                            <th class="hide-th" scope="col">Familia</th>
+                            <th class="hide-th" scope="col">Sub Familia</th>
                             <th scope="col">Cantidad</th>
-                            <th scope="col">Presentación</th>
+                            <th class="hide-th" scope="col">Presentación</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr id="product_item_1" class="row-item-added family-frutas-y-verduras">
-                            <th scope="row"><div>1</div></th>
-                            <td class="row-item-id">
+                          <tr id="product_item_1" class="row-item-added row-item">
+                            <th scope="row">
+                              <div>
+                                <div>1</div>
+                                <div class="product_item_tag">Añadido</div>
+                              </div>
+                            </th>
+                            <td>
                                 <div>
                                     <svg class="icon-xl2 tomate-hd"></svg>
                                 </div>
                                 <p>Tomate</p>
                             </td>
-                            <td>Frutas y Verduras</td>
-                            <td>Verduras</td>
+                            <td class="hide-td">Frutas y Verduras</td>
+                            <td class="hide-td">Verduras</td>
                             <td class="row-item-count hide-input">
                               <div class="input-group">
                                 <div class="input-group-prepend">
@@ -76,18 +81,18 @@
                                 <svg class="icon-lg caja-hd"></svg>
                               </div>
                             </td>
-                            <td>Caja</td>
+                            <td class="hide-td">Caja</td>
                           </tr>
-                          <tr id="product_item_2" class="row-item-added family-frutas-y-verduras">
+                          <tr id="product_item_2" class="row-item-added row-item">
                             <th scope="row"><div>1</div></th>
-                            <td class="row-item-id">
+                            <td>
                                 <div>
                                     <svg class="icon-xl2 pan-hd"></svg>
                                 </div>
                                 <p>Pan</p>
                             </td>
-                            <td>Panadería</td>
-                            <td>Pan de molde</td>
+                            <td class="hide-td">Panadería</td>
+                            <td class="hide-td">Pan de molde</td>
                             <td class="row-item-count hide-input">
                               <div class="input-group">
                                 <div class="input-group-prepend">
@@ -103,18 +108,18 @@
                                 <svg class="icon-lg bolsa-hd"></svg>
                               </div>
                             </td>
-                            <td>Bolsa</td>
+                            <td class="hide-td">Bolsa</td>
                           </tr>
-                          <tr id="product_item_3" class="row-item-added family-frutas-y-verduras">
+                          <tr id="product_item_3" class="row-item-added row-item">
                             <th scope="row"><div>1</div></th>
-                            <td class="row-item-id">
+                            <td>
                                 <div>
                                     <svg class="icon-xl2 carne-hd"></svg>
                                 </div>
                                 <p>Carne</p>
                             </td>
-                            <td>Carnes</td>
-                            <td>Carne roja</td>
+                            <td class="hide-td">Carnes</td>
+                            <td class="hide-td">Carne roja</td>
                             <td class="row-item-count hide-input">
                               <div class="input-group">
                                 <div class="input-group-prepend">
@@ -130,18 +135,18 @@
                                 <svg class="icon-lg kilogramos-hd"></svg>
                               </div>
                             </td>
-                            <td>Kilogramos</td>
+                            <td class="hide-td">Kilogramos</td>
                           </tr>
-                          <tr id="product_item_4" class="row-item-added family-frutas-y-verduras">
+                          <tr id="product_item_4" class="row-item-added row-item">
                             <th scope="row"><div>1</div></th>
-                            <td class="row-item-id">
+                            <td>
                                 <div>
                                     <svg class="icon-xl2 galletas-hd"></svg>
                                 </div>
                                 <p>Galletas</p>
                             </td>
-                            <td>Dulcería</td>
-                            <td>Galletas</td>
+                            <td class="hide-td">Dulcería</td>
+                            <td class="hide-td">Galletas</td>
                             <td class="row-item-count hide-input">
                               <div class="input-group">
                                 <div class="input-group-prepend">
@@ -157,18 +162,18 @@
                                 <svg class="icon-lg paquete-hd"></svg>
                               </div>
                             </td>
-                            <td>Paquete</td>
+                            <td class="hide-td">Paquete</td>
                           </tr>
-                          <tr id="product_item_5" class="row-item-added family-frutas-y-verduras">
+                          <tr id="product_item_5" class="row-item-added row-item">
                             <th scope="row"><div>1</div></th>
-                            <td class="row-item-id">
+                            <td>
                                 <div>
                                     <svg class="icon-xl2 queso-hd"></svg>
                                 </div>
                                 <p>Queso</p>
                             </td>
-                            <td>Lácteos</td>
-                            <td>Quesos</td>
+                            <td class="hide-td">Lácteos</td>
+                            <td class="hide-td">Quesos</td>
                             <td class="row-item-count hide-input">
                               <div class="input-group">
                                 <div class="input-group-prepend">
@@ -184,7 +189,7 @@
                                 <svg class="icon-lg pieza-hd"></svg>
                               </div>
                             </td>
-                            <td>Pieza</td>
+                            <td class="hide-td">Pieza</td>
                           </tr>
                         </tbody>
                       </table>
@@ -216,35 +221,114 @@
 
       // Recorrer cada elemento LI y agregar el evento de clic
       for (let i = 0; i < items_tr.length; i++) {
-        
         // Permite mostrar u ocultar los campos para añadir productos
         items_tr[i].getElementsByClassName('row-item-count')[0].children[1].addEventListener('click', function() {
           this.parentElement.classList.toggle('hide-input');
           this.parentElement.classList.toggle('show-input');
         });
-        // Permite SUMAR productos
-        function sum_Product(element) {
-          let id = element.parentElement.parentElement.parentElement.parentElement.id;
-          let input_count = element.parentElement.parentElement.querySelector('#'+id+'_count');
-          let tag_count = element.parentElement.parentElement.parentElement.children[1].children[0].children[0];
-          input_count.value = parseInt(input_count.value) + 1;
-          tag_count.innerHTML = input_count.value;
+        // Determinar el si el producto será catalogado con una etiqueta o no en caso de haber una cantidad solicitada
+        function set_Product_Tag(element) {
+          
         }
-        items_tr[i].getElementsByClassName('row-item-count')[0].children[0].children[0].children[0].addEventListener('click', function() {
-          sum_Product(this);
-        });
-        // Permite ELIMINAR productos
-        function del_Product(element) {
-          let id = element.parentElement.parentElement.parentElement.parentElement.id;
-          let input_count = element.parentElement.parentElement.querySelector('#'+id+'_count');
-          let tag_count = element.parentElement.parentElement.parentElement.children[1].children[0].children[0];
-          if (input_count.value > 0) {
-            input_count.value = parseInt(input_count.value) - 1;
-            tag_count.innerHTML = input_count.value;
+        // Determinar el objeto
+        function det_Object(element) {
+          let item_id = element.id
+          let input_count = element.querySelector('#'+item_id+'_count')
+          let tag_count = element.children[4].children[1].children[0].children[0]
+          
+          let row_object = [
+            { id: item_id},
+            { input_count: input_count },
+            { tag_count: tag_count }
+          ];
+          
+          return row_object;
+        }
+        // Permite VERIFICAR input productos
+        function check_Product(element) {
+          // Se confirma que el valor del elemento sea inferior a 0
+          if (element[1].input_count.value < 0) {
+            // En caso de ser un número negativo, se actualizará el input a 0, de esa manera bloquear el ingreso de números negativos al teclearlos
+            element[1].input_count.value = parseInt(0);
+            // Por consecuencia, la etiqueta también se actualizará a 0
+            element[2].tag_count.innerHTML = parseInt(element[1].input_count.value);
+          }else if (element[1].input_count.value === '') {
+            // En caso de que se eliminen todos los números en el campo y quede vacío, se actualizará el input a 0
+            element[1].input_count.value = parseInt(0);
+            // Por consecuencia, la etiqueta también se actualizará a 0
+            element[2].tag_count.innerHTML = parseInt(element[1].input_count.value);
+          }else{
+            // Por contrario, si el valor ingresado por teclado es mayor a 0, la etiqueta también se actualizará al valor del input
+            element[2].tag_count.innerHTML = parseInt(element[1].input_count.value);
           }
         }
+        // Permite SUMAR productos
+        function sum_Product(element, update) {
+          // Se verifica que el valor de update sea verdadero
+          if (update){
+            // Si es verdadero, significa que fue llamado desde el botón + y requiere sumarse el valor al input y actualizar la etiqueta
+            element[1].input_count.value = parseInt(element[1].input_count.value) + 1;
+            // Se actualiza la etiqueta con respecto al valor del input
+            element[2].tag_count.innerHTML = element[1].input_count.value;
+          }else{
+            // Si es falso, significa que el valor se está ingresando por las teclas flecha ARRIBA, por lo cual el input se actualiza automáticamente y sólo resta actualizar la etiqueta
+            element[2].tag_count.innerHTML = parseInt(element[1].input_count.value) + 1;
+          }
+        }
+        // Permite ELIMINAR productos
+        function del_Product(element, update) {
+          // Se verifica que el valor dentro del input sea mayor a 0
+          if (element[1].input_count.value > 0) {
+            // Se verifica que el valor de update sea verdadero
+            if (update){
+              // Si es verdadero, significa que fue llamado desde el botón - y requiere restar el valor al input y actualizar la etiqueta
+              element[1].input_count.value = parseInt(element[1].input_count.value) - 1;
+              // Se actualiza la etiqueta con respecto al valor del input
+              element[2].tag_count.innerHTML = element[1].input_count.value;
+            }else{
+              // Si es falso, significa que el valor se está ingresando por las teclas flecha ABAJO y flecha ABAJO, por lo cual el input se actualiza automáticamente y sólo resta actualizar la etiqueta
+              element[2].tag_count.innerHTML = parseInt(element[1].input_count.value) - 1;
+            }
+          }else if (element[1].input_count.value == 0 && !update){
+            // Si el valor del input es igual a 0 y el valor de update es falso, significa que se está intentando actualizar el input con flecha ABAJO hacia valores negativos, lo cual no está permitido, entonces siempre se sumará un 1 cuando intente llegar a -1 regresándolo a 0 causando un bloqueo a números negativos
+            element[1].input_count.value = parseInt(element[1].input_count.value) + 1;
+          }
+        }
+        // Agregar un evento al botón +
+        items_tr[i].getElementsByClassName('row-item-count')[0].children[0].children[0].children[0].addEventListener('click', function() {
+          // Función para crear un array del input
+          let rowObject = det_Object(this.parentElement.parentElement.parentElement.parentElement);
+          // Función para sumar dentro del input
+          sum_Product(rowObject, true);
+        });
+        // Agregar un evento al botón -
         items_tr[i].getElementsByClassName('row-item-count')[0].children[0].children[2].children[0].addEventListener('click', function() {
-          del_Product(this);
+          // Función para crear un array del input
+          let rowObject = det_Object(this.parentElement.parentElement.parentElement.parentElement);
+          // Función para restar dentro del input
+          del_Product(rowObject, true);
+        });
+        // Agregar un evento keydown al input
+        items_tr[i].getElementsByClassName('row-item-count')[0].children[0].children[1].addEventListener('keydown', function(event) {
+          // Verificar si se presionó la tecla "Arriba" (código 38) o "Abajo" (código 40)
+          if (event.keyCode === 38) { // Flecha "Arriba"
+            // Función para crear un array del input
+            let rowObject = det_Object(this.parentElement.parentElement.parentElement);
+            // Función para sumar dentro del input
+            sum_Product(rowObject, false);
+          } else if (event.keyCode === 40) { // Flecha "Abajo"
+            // Función para crear un array del input
+            let rowObject = det_Object(this.parentElement.parentElement.parentElement);
+            // Función para restar dentro del input
+            del_Product(rowObject, false);          
+          }
+        });
+        // Agregar un evento input al input
+        items_tr[i].getElementsByClassName('row-item-count')[0].children[0].children[1].addEventListener('input', function() {
+          // Función para crear un array del input
+          let rowObject = det_Object(this.parentElement.parentElement.parentElement);
+          // Función para verificar si se tecleó el número y cumple con no ser inferior a 0
+          check_Product(rowObject);          
         });
       }
     </script>

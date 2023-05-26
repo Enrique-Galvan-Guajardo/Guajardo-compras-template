@@ -4,73 +4,72 @@
 .product-card a.nav-link.dropdown-toggle::after{
     margin-left: 1rem;
 }
-.family-frutas-y-verduras > td.row-item-id{
+.row-item > td.row-item-id{
     overflow: hidden;
 }
-.family-frutas-y-verduras > td.row-item-id > div {
+.row-item > td.row-item-id > div {
     position: relative;
     transform: scale(.6);
     opacity: .2;
     bottom: -20px;
     width: min-content;
 }
-.family-frutas-y-verduras > td.row-item-id > div > svg{
+.row-item > td.row-item-id > div > svg{
     position: absolute;
 }
-
-.row-item-added > th::after{
-    content: 'Añadido';
-    font-weight: 500;
-    position: relative;
-    bottom: -13px;
-    background-color: darkgreen;
+.row-item-added > th:first-child > div:first-child > div:last-child {
     font-size: small;
-    padding: 0 .5rem;
+    padding: 0.2rem 0.5rem;
     color: white;
-    text-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 2px black;
     border-radius: 4px 4px 0 0;
+    background: green;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
-.family-frutas-y-verduras > td.row-item-count {
+.row-item > td.row-item-count {
     overflow: hidden;
 }
-.family-frutas-y-verduras > td.row-item-count > div{
+.row-item > td.row-item-count > div{
     width: max-content;
 }
-.family-frutas-y-verduras > td.row-item-count > div > input{
+.row-item > td.row-item-count > div > input{
     width: 5rem;
     text-align: center;
 }
-.family-frutas-y-verduras > td.row-item-count > div > div > button > div{
+.row-item > td.row-item-count > div > div > button > div{
     transform: scale(1.8);
     height: 1rem;
     line-height: 1.2rem;
 }
-.family-frutas-y-verduras > td.row-item-count > div:nth-child(2){
+.row-item > td.row-item-count > div:nth-child(2){
     left: 15%;
     transform: scale(1);
     bottom: -8px;
     display: flex;
     align-items: center;
 }
-.family-frutas-y-verduras > td.show-input > div:nth-child(2){
+.row-item > td.show-input > div:nth-child(2){
     position: relative;
 }
-.family-frutas-y-verduras > td.row-item-count > div:nth-child(2) > div{
+.row-item > td.row-item-count > div:nth-child(2) > div{
     margin: 0px 0px 0px 50px;
 }
-.family-frutas-y-verduras > td.row-item-count > div:nth-child(2) > svg{
+.row-item > td.row-item-count > div:nth-child(2) > svg{
     position: absolute;
 }
-.family-frutas-y-verduras > td.hide-input > div:nth-child(2) > svg{
+.row-item > td.hide-input > div:nth-child(2) > svg{
     opacity: 1;
 }
-.family-frutas-y-verduras > td.show-input > div:nth-child(2) > svg{
+.row-item > td.show-input > div:nth-child(2) > svg{
     opacity: .5;
 }
-.family-frutas-y-verduras > td.hide-input > div:nth-child(1) {
+.row-item > td.hide-input > div:nth-child(1),
+.row-item > td.hide-td,
+thead > tr > th.hide-th {
     display: none;
 }
-.family-frutas-y-verduras > td.hide-input > div:nth-child(2) {
+.row-item > td.hide-input > div:nth-child(2) {
     position: unset;
     /*margin-inline: auto;*/
 }
