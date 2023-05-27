@@ -290,7 +290,11 @@
       const text_product_search = document.getElementById('input-products-search');
       const select_product_category = document.getElementById('inputProductCategory');
       const select_product_subcategory = document.getElementById('inputProductSubCategory');
-      
+      let text_filters = [
+            { input_text: ''},
+            { select_category_text: '' },
+            { select_subcategory_text: '' }
+          ];
       // Obtener todos los elementos LI de la lista
       const items_tr = order_table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
 
@@ -425,8 +429,26 @@
       // Cada que se escriba dentro del input, se ejecutará la función de búsqueda dentro de la tabla
       text_product_search.addEventListener('input', function () {
         // Obtener el texto del input
-        let searchTerm = this.value.toLowerCase();
-        // Recorrer cada elemento tr para leer los textos 
+        text_filters[0].input_text = this.value.toLowerCase();
+        search_For();
+      })      
+      // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
+      select_product_category.addEventListener('change', function () {
+        // Obtener el texto del select
+        text_filters[1].select_category_text = this.value.toLowerCase();
+        
+        search_For();
+      })     
+      // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
+      select_product_subcategory.addEventListener('change', function () {
+        // Obtener el texto del select
+        text_filters[2].select_subcategory_text = this.value.toLowerCase();
+        
+        search_For();
+      })      
+      
+      function search_For() {
+          // Recorrer cada elemento tr para leer los textos 
         for (let i = 0; i < items_tr.length; i++) {
           // Buscar en cada tr uno por uno 
           let tr = items_tr[i];
@@ -434,60 +456,22 @@
           let td = tr.getElementsByTagName('td');
           // Capturar la información de rutas específicas dentro del td 
           let prod_name = td[0].children[0].textContent.toLowerCase();
-          // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
-          if (prod_name.includes(searchTerm)) {
-            // Mostrar el <tr> si se encuentra la palabra
-            tr.classList.remove('hide-tr') 
-          }else {
-            // Ocultar el <tr> si se encuentra la palabra
-            tr.classList.add('hide-tr')
-          }
-        }
-      })      
-      // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
-      select_product_category.addEventListener('change', function () {
-        // Obtener el texto del select
-        let categoryTerm = this.value.toLowerCase();
-        // Recorrer cada elemento tr para leer los textos 
-        for (let i = 0; i < items_tr.length; i++) {
-          // Buscar en cada tr uno por uno 
-          let tr = items_tr[i];
-          // Buscar entre ciertos td la información escrita relevante para la búsqueda 
-          let td = tr.getElementsByTagName('td');
           // Capturar la información de rutas específicas dentro del td 
           let prod_cat = td[1].textContent.toLowerCase();
-          // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
-          if (prod_cat.includes(categoryTerm)) {
-            // Mostrar el <tr> si se encuentra la palabra
-              tr.classList.remove('hide-tr') 
-            }else {
-            // Ocultar el <tr> si se encuentra la palabra
-            tr.classList.add('hide-tr')
-          }
-        }
-      })     
-      // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
-      select_product_subcategory.addEventListener('change', function () {
-        // Obtener el texto del select
-        let categoryTerm = this.value.toLowerCase();
-        // Recorrer cada elemento tr para leer los textos 
-        for (let i = 0; i < items_tr.length; i++) {
-          // Buscar en cada tr uno por uno 
-          let tr = items_tr[i];
-          // Buscar entre ciertos td la información escrita relevante para la búsqueda 
-          let td = tr.getElementsByTagName('td');
           // Capturar la información de rutas específicas dentro del td 
           let prod_sub_cat = td[2].textContent.toLowerCase();
-          // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
-          if (prod_sub_cat.includes(categoryTerm)) {
-            // Mostrar el <tr> si se encuentra la palabra
-              tr.classList.remove('hide-tr') 
-            }else {
-            // Ocultar el <tr> si se encuentra la palabra
+          console.log(text_filters[1].select_category_text)
+          if ((text_filters[0].input_text === '' || prod_name.includes(text_filters[0].input_text)) &&
+              (text_filters[1].select_category_text === '' || prod_cat === text_filters[1].select_category_text) &&
+              (text_filters[2].select_subcategory_text === '' || prod_sub_cat === text_filters[2].select_subcategory_text)) {
+            tr.classList.remove('hide-tr') 
+          }else{
             tr.classList.add('hide-tr')
           }
+
+          // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
         }
-      })      
+      }
     </script> 
 </body>
 </html>
