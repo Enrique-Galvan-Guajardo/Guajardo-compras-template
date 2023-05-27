@@ -3,6 +3,10 @@
     transform: scale(1.5);
 }
 /*TABLE*/
+.table-space{
+    display: flex;
+    display: inline-flex;
+}
 .product-card a.nav-link.dropdown-toggle::after{
     margin-left: 1rem;
 }
@@ -98,6 +102,7 @@
     opacity: .5;
 }
 .row-item > td.hide-input > div:nth-child(1),
+.row-item.hide-tr,
 .row-item > td.hide-td,
 thead > tr > th.hide-th {
     display: none;
@@ -106,3 +111,4 @@ thead > tr > th.hide-th {
     position: unset;
     /*margin-inline: auto;*/
 }
+ 
