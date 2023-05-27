@@ -1,3 +1,7 @@
+.icon-xsm {
+    width: 1rem;
+    height: 1rem;
+}
 .icon-sm {
     width: 2rem;
     height: 2rem;
@@ -26,7 +30,7 @@
     width: 12rem;
     height: 12rem;
 }
-svg.icon-sm,svg.icon-md,svg.icon-lg,svg.icon-xl,svg.icon-xl2,svg.icon-xl3,svg.icon-xl4{
+svg.icon-xsm,svg.icon-sm,svg.icon-md,svg.icon-lg,svg.icon-xl,svg.icon-xl2,svg.icon-xl3,svg.icon-xl4{
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -68,6 +72,14 @@ svg.icon-sm,svg.icon-md,svg.icon-lg,svg.icon-xl,svg.icon-xl2,svg.icon-xl3,svg.ic
 }
 .cangrejo-hd {
     background-image: url('./Pack_Iconos_SVG/icons8-cangrejo-stickers-96.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.busqueda {
+    background-image: url('./Pack_Iconos_SVG/icons8-búsqueda-stickers-32.svg');
+    /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
+}
+.busqueda-hd {
+    background-image: url('./Pack_Iconos_SVG/icons8-búsqueda-stickers-96.svg');
     /* O puedes utilizar una URL absoluta o una URL relativa según tu estructura de archivos */
 }
 .caja {
