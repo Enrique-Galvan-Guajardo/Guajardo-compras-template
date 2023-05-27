@@ -67,27 +67,29 @@
                           </div>
                         </div>
                         <div class="tab-pane fade" id="pills-filter" role="tabpanel" aria-labelledby="pills-filter-tab">
-                          <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <label class="input-group-text" for="inputProductCategory">Categoría</label>
+                          <div class="row">
+                            <div class="input-group mb-3 col-12 col-sm-6">
+                              <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputProductCategory">Categoría</label>
+                              </div>
+                              <select class="custom-select" id="inputProductCategory">
+                                <option selected>Seleccionar...</option>
+                                <option value="Frutas y Verduras">Frutas y Verduras</option>
+                                <option value="Panadería">Panadería</option>
+                                <option value="Carnicería">Carnicería</option>
+                              </select>
                             </div>
-                            <select class="custom-select" id="inputProductCategory">
-                              <option selected>Selecciona...</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                            </select>
-                          </div>
-                          <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <label class="input-group-text" for="inputProductSubCategory">Sub Categoría</label>
+                            <div class="input-group mb-3 col-12 col-sm-6">
+                              <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputProductSubCategory">Sub Categoría</label>
+                              </div>
+                              <select class="custom-select" id="inputProductSubCategory">
+                                <option selected>Seleccionar...</option>
+                                <option value="Tomate">Tomate</option>
+                                <option value="Pan de molde">Pan de molde</option>
+                                <option value="Carnes rojas">Carnes rojas</option>
+                              </select>
                             </div>
-                            <select class="custom-select" id="inputProductSubCategory">
-                              <option selected>Selecciona...</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                            </select>
                           </div>
                         </div>
                       </div>
@@ -286,7 +288,9 @@
       
       // Obtener el input de búsqueda
       const text_product_search = document.getElementById('input-products-search');
-
+      const select_product_category = document.getElementById('inputProductCategory');
+      const select_product_subcategory = document.getElementById('inputProductSubCategory');
+      
       // Obtener todos los elementos LI de la lista
       const items_tr = order_table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
 
@@ -421,7 +425,7 @@
       // Cada que se escriba dentro del input, se ejecutará la función de búsqueda dentro de la tabla
       text_product_search.addEventListener('input', function () {
         // Obtener el texto del input
-        let searchTerm = this.value;
+        let searchTerm = this.value.toLowerCase();
         // Recorrer cada elemento tr para leer los textos 
         for (let i = 0; i < items_tr.length; i++) {
           // Buscar en cada tr uno por uno 
@@ -430,17 +434,55 @@
           let td = tr.getElementsByTagName('td');
           // Capturar la información de rutas específicas dentro del td 
           let prod_name = td[0].children[0].textContent.toLowerCase();
-          let prod_cat = td[1].textContent.toLowerCase();
-          let prod_sub_cat = td[2].textContent.toLowerCase();
-          let prod_pres = td[4].textContent.toLowerCase();
           // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
-          if (prod_name.includes(searchTerm) ||
-          prod_cat.includes(searchTerm) ||
-          prod_sub_cat.includes(searchTerm) ||
-          prod_pres.includes(searchTerm)) {
+          if (prod_name.includes(searchTerm)) {
             // Mostrar el <tr> si se encuentra la palabra
             tr.classList.remove('hide-tr') 
           }else {
+            // Ocultar el <tr> si se encuentra la palabra
+            tr.classList.add('hide-tr')
+          }
+        }
+      })      
+      // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
+      select_product_category.addEventListener('change', function () {
+        // Obtener el texto del select
+        let categoryTerm = this.value.toLowerCase();
+        // Recorrer cada elemento tr para leer los textos 
+        for (let i = 0; i < items_tr.length; i++) {
+          // Buscar en cada tr uno por uno 
+          let tr = items_tr[i];
+          // Buscar entre ciertos td la información escrita relevante para la búsqueda 
+          let td = tr.getElementsByTagName('td');
+          // Capturar la información de rutas específicas dentro del td 
+          let prod_cat = td[1].textContent.toLowerCase();
+          // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
+          if (prod_cat.includes(categoryTerm)) {
+            // Mostrar el <tr> si se encuentra la palabra
+              tr.classList.remove('hide-tr') 
+            }else {
+            // Ocultar el <tr> si se encuentra la palabra
+            tr.classList.add('hide-tr')
+          }
+        }
+      })     
+      // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
+      select_product_subcategory.addEventListener('change', function () {
+        // Obtener el texto del select
+        let categoryTerm = this.value.toLowerCase();
+        // Recorrer cada elemento tr para leer los textos 
+        for (let i = 0; i < items_tr.length; i++) {
+          // Buscar en cada tr uno por uno 
+          let tr = items_tr[i];
+          // Buscar entre ciertos td la información escrita relevante para la búsqueda 
+          let td = tr.getElementsByTagName('td');
+          // Capturar la información de rutas específicas dentro del td 
+          let prod_sub_cat = td[2].textContent.toLowerCase();
+          // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
+          if (prod_sub_cat.includes(categoryTerm)) {
+            // Mostrar el <tr> si se encuentra la palabra
+              tr.classList.remove('hide-tr') 
+            }else {
             // Ocultar el <tr> si se encuentra la palabra
             tr.classList.add('hide-tr')
           }
