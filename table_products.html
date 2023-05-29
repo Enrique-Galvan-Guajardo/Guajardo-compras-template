@@ -73,7 +73,7 @@
                                 <label class="input-group-text" for="inputProductCategory">Categoría</label>
                               </div>
                               <select class="custom-select" id="inputProductCategory">
-                                <option selected>Seleccionar...</option>
+                                <option selected value="all">Seleccionar...</option>
                                 <option value="Frutas y Verduras">Frutas y Verduras</option>
                                 <option value="Panadería">Panadería</option>
                                 <option value="Carnicería">Carnicería</option>
@@ -84,10 +84,11 @@
                                 <label class="input-group-text" for="inputProductSubCategory">Sub Categoría</label>
                               </div>
                               <select class="custom-select" id="inputProductSubCategory">
-                                <option selected>Seleccionar...</option>
+                                <option selected value="all">Seleccionar...</option>
                                 <option value="Tomate">Tomate</option>
                                 <option value="Pan de molde">Pan de molde</option>
                                 <option value="Carnes rojas">Carnes rojas</option>
+                                <option value="Carnes blancas">Carnes blancas</option>
                               </select>
                             </div>
                           </div>
@@ -259,6 +260,36 @@
                                 </div>
                               </td>
                               <td class="hide-td">Pieza</td>
+                            </tr>
+                            <tr id="product_item_6" class="row-item">
+                              <th scope="row">
+                                <p>6</p>
+                                <div class="product_item_tag mt-4"></div>
+                              </th>
+                              <td class="row-item-spec">
+                                <p class="mt-2 mb-0">Pescado</p>
+                                <div title="Carnicería > Carnes blancas">
+                                  <svg class="icon-xl pez-hd"></svg>
+                                </div>
+                              </td>
+                              <td class="hide-td">Carnicería</td>
+                              <td class="hide-td">Carnes blancas</td>
+                              <td class="row-item-count hide-input">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                  </div>
+                                  <input id="product_item_6_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                  <div class="input-group-prepend">
+                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
+                                  <svg class="icon-lg kilogramos-hd"></svg>
+                                </div>
+                              </td>
+                              <td class="hide-td">Kilogramos</td>
                             </tr>
                           </tbody>
                       </table>
@@ -454,21 +485,51 @@
           let tr = items_tr[i];
           // Buscar entre ciertos td la información escrita relevante para la búsqueda 
           let td = tr.getElementsByTagName('td');
+
+
           // Capturar la información de rutas específicas dentro del td 
           let prod_name = td[0].children[0].textContent.toLowerCase();
           // Capturar la información de rutas específicas dentro del td 
           let prod_cat = td[1].textContent.toLowerCase();
           // Capturar la información de rutas específicas dentro del td 
           let prod_sub_cat = td[2].textContent.toLowerCase();
-          console.log(text_filters[1].select_category_text)
-          if ((text_filters[0].input_text === '' || prod_name.includes(text_filters[0].input_text)) &&
-              (text_filters[1].select_category_text === '' || prod_cat === text_filters[1].select_category_text) &&
-              (text_filters[2].select_subcategory_text === '' || prod_sub_cat === text_filters[2].select_subcategory_text)) {
-            tr.classList.remove('hide-tr') 
-          }else{
-            tr.classList.add('hide-tr')
-          }
 
+          if (text_filters[1].select_category_text === 'all') {
+            tr.classList.remove('hide-tr') 
+            select_product_subcategory.selectedIndex = 0;    
+          }else{
+            if ((prod_cat.includes(text_filters[1].select_category_text))) {
+              tr.classList.remove('hide-tr') 
+              
+              if ((text_filters[2].select_subcategory_text === 'all')) {
+                tr.classList.remove('hide-tr') 
+              }else{
+                if ((prod_cat.includes(text_filters[1].select_category_text)) &&
+                (prod_sub_cat.includes(text_filters[2].select_subcategory_text))) {
+                  tr.classList.remove('hide-tr') 
+                }else{
+                  tr.classList.add('hide-tr')
+                }
+              }
+            }else{
+              tr.classList.add('hide-tr')
+            }
+          }
+                
+          
+
+          /*
+          if (text_filters[1].select_category_text === '' &
+          text_filters[2].select_subcategory_text === '') {
+            
+          }
+          if ((text_filters[0].input_text === '' || prod_name.includes(text_filters[0].input_text)) &&
+          (text_filters[1].select_category_text === '' || prod_cat === text_filters[1].select_category_text) &&
+          (text_filters[2].select_subcategory_text === '' || prod_sub_cat === text_filters[2].select_subcategory_text)) {
+          }else{
+          }
+          
+          */
           // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
         }
       }
