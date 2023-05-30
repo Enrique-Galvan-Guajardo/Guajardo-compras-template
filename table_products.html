@@ -291,6 +291,36 @@
                               </td>
                               <td class="hide-td">Kilogramos</td>
                             </tr>
+                            <tr id="product_item_7" class="row-item">
+                              <th scope="row">
+                                <p>7</p>
+                                <div class="product_item_tag mt-4"></div>
+                              </th>
+                              <td class="row-item-spec">
+                                <p class="mt-2 mb-0">Trucha</p>
+                                <div title="Carnicería > Carnes blancas">
+                                  <svg class="icon-xl pez-hd"></svg>
+                                </div>
+                              </td>
+                              <td class="hide-td">Carnicería</td>
+                              <td class="hide-td">Carnes blancas</td>
+                              <td class="row-item-count hide-input">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                  </div>
+                                  <input id="product_item_7_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                  <div class="input-group-prepend">
+                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
+                                  <svg class="icon-lg kilogramos-hd"></svg>
+                                </div>
+                              </td>
+                              <td class="hide-td">Kilogramos</td>
+                            </tr>
                           </tbody>
                       </table>
                     </div>
@@ -461,76 +491,106 @@
       text_product_search.addEventListener('input', function () {
         // Obtener el texto del input
         text_filters[0].input_text = this.value.toLowerCase();
-        search_For();
+        // Función para buscar el texto deseado desde el texto ingresado
+        search_For()
       })      
       // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
       select_product_category.addEventListener('change', function () {
         // Obtener el texto del select
         text_filters[1].select_category_text = this.value.toLowerCase();
-        
+        // Función para buscar el texto deseado desde categorías
         search_For();
       })     
       // Cada que se selecciona un texto del filtro select, se buscará en cada tr de toda la tabla
       select_product_subcategory.addEventListener('change', function () {
         // Obtener el texto del select
         text_filters[2].select_subcategory_text = this.value.toLowerCase();
-        
+        // Función para buscar el texto deseado desde subcategorías
         search_For();
       })      
       
       function search_For() {
-          // Recorrer cada elemento tr para leer los textos 
+        // Recorrer cada elemento tr para leer los textos 
         for (let i = 0; i < items_tr.length; i++) {
           // Buscar en cada tr uno por uno 
           let tr = items_tr[i];
           // Buscar entre ciertos td la información escrita relevante para la búsqueda 
           let td = tr.getElementsByTagName('td');
 
-
-          // Capturar la información de rutas específicas dentro del td 
+          // Capturar la información del nombre en base a la rutas específica dentro del td 
           let prod_name = td[0].children[0].textContent.toLowerCase();
-          // Capturar la información de rutas específicas dentro del td 
+          // Capturar la información de la categoría en base a la rutas específica dentro del td 
           let prod_cat = td[1].textContent.toLowerCase();
-          // Capturar la información de rutas específicas dentro del td 
+          // Capturar la información de la subcategoría en base a la rutas específica dentro del td 
           let prod_sub_cat = td[2].textContent.toLowerCase();
-
+          
+          // Se verifica que la opción seleccionada del select de categorías sea sin definir
           if (text_filters[1].select_category_text === 'all') {
+            // En caso de no estar definida la categoría, se remueven las clases hide de todos los tr haciéndolas visibles nuevamente
             tr.classList.remove('hide-tr') 
-            select_product_subcategory.selectedIndex = 0;    
+            // Se reinicia el select de subcategoría
+            select_product_subcategory.selectedIndex = 0;
+            // Se reinicia la variable de subcategoría
+            text_filters[2].select_subcategory_text = select_product_subcategory.value.toLowerCase();
           }else{
             if ((prod_cat.includes(text_filters[1].select_category_text))) {
+              // En caso de haberse seleccionado algo en categoría, se ocultarán con hide los tr que no cumplan con dicha categoría
               tr.classList.remove('hide-tr') 
-              
               if ((text_filters[2].select_subcategory_text === 'all')) {
+                // En caso de no estar definida la subcategoría, se remueven las clases hide de todos los tr haciéndolas visibles nuevamente
                 tr.classList.remove('hide-tr') 
               }else{
+                // En caso de estar definida se hace lo siguiente
                 if ((prod_cat.includes(text_filters[1].select_category_text)) &&
                 (prod_sub_cat.includes(text_filters[2].select_subcategory_text))) {
+                  // Se verificarán los tr que cumplan con la categoría y subcategoría
                   tr.classList.remove('hide-tr') 
                 }else{
+                  // En caso de no cumplir, se ocultan con la clase hide
                   tr.classList.add('hide-tr')
                 }
               }
             }else{
+              // En caso de no cumplir, se ocultan con la clase hide
               tr.classList.add('hide-tr')
             }
           }
-                
           
-
-          /*
-          if (text_filters[1].select_category_text === '' &
-          text_filters[2].select_subcategory_text === '') {
+          //Se verificará que la categoría sea seleccionada y subcategoría esté sin definir
+          if (text_filters[1].select_category_text !== 'all' && 
+              text_filters[2].select_subcategory_text === 'all') {
             
-          }
-          if ((text_filters[0].input_text === '' || prod_name.includes(text_filters[0].input_text)) &&
-          (text_filters[1].select_category_text === '' || prod_cat === text_filters[1].select_category_text) &&
-          (text_filters[2].select_subcategory_text === '' || prod_sub_cat === text_filters[2].select_subcategory_text)) {
+            //Se verificará que la categoría exista y el texto ingresado coincida con algun tr
+            if (prod_cat.includes(text_filters[1].select_category_text) &&
+            prod_name.includes(text_filters[0].input_text)) {
+              //Si categoría y texto coinciden con algún tr, se visualizará
+              tr.classList.remove('hide-tr')
+            }else{
+              // En caso de no cumplir, se ocultan con la clase hide
+              tr.classList.add('hide-tr')
+            }
+          }else if (text_filters[1].select_category_text !== 'all' && 
+                    text_filters[2].select_subcategory_text !== 'all'){
+              //Se verificará que la categoría y subcategoría hayan sido ingresadas
+            if (prod_cat.includes(text_filters[1].select_category_text) &&
+                prod_sub_cat.includes(text_filters[2].select_subcategory_text) &&
+                prod_name.includes(text_filters[0].input_text)) {
+              //Si categoría, subcategoría y texto coinciden con algún tr, se visualizará
+              tr.classList.remove('hide-tr')
+            }else{
+              // En caso de no cumplir, se ocultan con la clase hide
+              tr.classList.add('hide-tr')
+            } 
           }else{
+            //En caso de que la categoría y subcategoría estén sin definir, sólo se buscará el texto ingresado 
+            if (prod_name.includes(text_filters[0].input_text)) {
+              //Si el texto coincide con algún tr, se visualizará
+              tr.classList.remove('hide-tr')
+            }else{
+              // En caso de no cumplir, se ocultan con la clase hide
+              tr.classList.add('hide-tr')
+            }
           }
-          
-          */
-          // Verificar que el texto ingresado a buscar coincida con los textos en las rutas específicas 
         }
       }
     </script> 
