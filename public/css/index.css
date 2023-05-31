@@ -68,7 +68,12 @@ a.nav-link.dropdown-toggle::after{
     margin: auto 0 auto auto;
     transform: scale(1.6);
 }
-
+/*
+.test{
+    border: 1px solid red;
+    width: min-content;
+}
+*/
 
 .hide{
     display: none;

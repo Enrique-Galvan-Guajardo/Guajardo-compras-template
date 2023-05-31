@@ -1,12 +1,19 @@
-.navbar li.nav-item.d-flex{
+.navbar li.nav-item.d-flex,.navbar li.nav-item.dropdown{
     align-items: center;
     font-size: larger;
+    margin: auto 0px;
 }
-
-.dropdown-menu{
+.dropdown:last-child .dropdown-menu{
 right: 0;
 left: unset;
 }
+.navbar li.nav-item.dropdown > .dropdown-menu > .dropdown-item.d-flex{
+    align-items: center;
+}
+.navbar li.nav-item.dropdown > .dropdown-menu > .dropdown-item.d-flex > span.badge{
+    line-height: normal;
+}
+
 .user-nav-data{
     align-items: center;
 }
@@ -17,7 +24,6 @@ left: unset;
 }
 .user-nav-data > .user-name{
     line-height: 0rem;
-    font-size: larger;
 }
 
 .navbar-brand > h3{
