@@ -5,8 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <!--Links to stylesheets-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./public/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap">
+    
+    <!--Links to javascript files-->
+    <!--Bootstrap 5-->
+    <script src="./public/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/89ee7a970b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><h3 class="guajardo">Guajardo</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-flex align-middle">
+              <a class="nav-link" href="#">Proveedores</a>
+            </li>
+            <li class="nav-item d-flex align-middle">
+              <a class="nav-link" href="#">AUX Gerencia Guanza</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle d-flex" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="user-nav-data d-flex">
+                    <img class="user-avatar mr-2" src="https://scontent.fntr1-1.fna.fbcdn.net/v/t39.30808-6/313104807_190639650137010_1418261122581261707_n.png?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=gQWtlASfEtkAX9E4VsN&_nc_ht=scontent.fntr1-1.fna&oh=00_AfCOa1uWd01UnrbmI80-iNLGPnSNhHVsYMDjCVqWVyZ-NA&oe=647BCAD7" alt="Super Guajardo" title="Super Guajardo">
+                    <span class="user-name mr-2">Usuario</span>
+                </div>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <h6 class="dropdown-header">Opciones</h6>
+                <a class="dropdown-item" href="#">
+                    <i class="fa fa-sign-in mr-2" aria-hidden="true"></i>
+                    Iniciar Sesión
+                </a>
+                <a class="dropdown-item" href="#">
+                    <i class="fa fa-pencil-square-o mr-2" aria-hidden="true"></i>
+                    Registrarse
+                </a>
+                <div class="dropdown-divider"></div>
+                
+                <a class="dropdown-item" href="#">
+                    <i class="fa fa-sign-out mr-2" aria-hidden="true"></i>
+                    Salir
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
 </body>
 </html>

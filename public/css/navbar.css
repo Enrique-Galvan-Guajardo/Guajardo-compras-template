@@ -1,0 +1,35 @@
+.navbar li.nav-item.d-flex{
+    align-items: center;
+    font-size: larger;
+}
+
+.dropdown-menu{
+right: 0;
+left: unset;
+}
+.user-nav-data{
+    align-items: center;
+}
+.user-nav-data > .user-avatar{
+    height: 2rem;
+    width: auto;
+    border-radius: 50%;
+}
+.user-nav-data > .user-name{
+    line-height: 0rem;
+    font-size: larger;
+}
+
+.navbar-brand > h3{
+    border-bottom: 3px solid orange;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: white;
+    text-align: center;
+    line-height: 1.4rem;
+}
+
+.guajardo {
+    font-family: 'Futura Bold Italic', sans-serif;
+    color: darkblue;
+    margin: 0;
+}
