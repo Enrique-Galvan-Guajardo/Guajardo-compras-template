@@ -1,3 +1,8 @@
+nav.navbar{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
 .navbar li.nav-item.d-flex,.navbar li.nav-item.dropdown{
     align-items: center;
     font-size: larger;
@@ -41,6 +46,9 @@ left: unset;
 }
 .custom-nav{
     background-color: darkslateblue;
+    position: absolute;
+    top: 56px;
+    width: 100%;
 }
 .custom-nav > ul{
     list-style: none;
@@ -100,4 +108,74 @@ left: unset;
     transition: .8s ease height, .2s ease opacity;
     height: 0px;
     opacity: 0;
+}
+
+/* Estilos para pantallas grandes y superiores */
+@media (min-width: 768px) {
+    /* Agrega tus estilos específicos para pantallas grandes y superiores aquí */
+    .custom-nav{
+        width: 7rem;
+        position: absolute;
+        bottom: 0;
+        top: 4rem;
+    }
+    .custom-nav > ul{
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        box-shadow: 8px 0px 5px -5px rgb(0 0 0 / 50%);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+        /* Estilos generales para navegadores que no admiten WebKit o Mozilla scrollbar */
+        .custom-nav > ul::-webkit-scrollbar {
+            scrollbar-width: none; /* Ocultar la barra de desplazamiento en navegadores que no admiten scrollbar-width */
+        }
+        .custom-nav > ul::-webkit-scrollbar {
+            width: 0.5em; /* Ancho de la barra de desplazamiento */
+            background-color: transparent; /* Color de fondo de la barra de desplazamiento */
+        }
+        .custom-nav > ul::-webkit-scrollbar-thumb {
+            background-color: transparent; /* Color del pulgar de la barra de desplazamiento */
+        }
+
+        /* Estilos para navegadores basados en Mozilla */
+        .custom-nav > ul::-webkit-scrollbar-thumb {
+            scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+            scrollbar-color: transparent transparent; /* Color del pulgar y del fondo de la barra de desplazamiento */
+        }
+        .custom-nav > ul::-webkit-scrollbar-thumb {
+            background-color: transparent; /* Color del pulgar de la barra de desplazamiento en WebKit */
+        }
+        .custom-nav > ul::-webkit-scrollbar-track {
+            background-color: transparent; /* Color del fondo de la barra de desplazamiento en WebKit */
+        }
+    .custom-nav > ul > li:first-child{
+        margin-left: unset;
+        margin-top: 0;
+    }
+    .custom-nav > ul > li:last-child{
+        margin-right: unset;
+        margin-bottom: 0;
+    }
+    .custom-nav > ul > li{
+        margin-inline: unset;
+        margin-block: 1rem;
+    }
+    .custom-nav > ul > li > a{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        width: 6rem;
+        margin: auto;
+    }
+    .custom-nav > ul > li > a > span{
+        display: flex;
+        align-items: center;
+    }   
+    .custom-nav > ul > li:hover > a > span{
+        transition: .4s ease height .4s, .4s ease opacity .4s;
+        height: 48px;
+        opacity: 1;
+    }   
 }
