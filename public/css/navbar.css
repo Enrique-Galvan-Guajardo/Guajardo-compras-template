@@ -47,8 +47,8 @@ left: unset;
 .custom-nav{
     background-color: darkslateblue;
     position: absolute;
-    top: 56px;
     width: 100%;
+    top: 56px;
 }
 .custom-nav > ul{
     list-style: none;
@@ -143,13 +143,14 @@ left: unset;
         width: 7rem;
         position: absolute;
         bottom: 0;
-        top: 4rem;
+        top: 0;
+        box-shadow: 8px 0px 5px -5px rgb(0 0 0 / 50%);
     }
     .custom-nav > ul{
+        padding-top: 4rem;
         flex-direction: column;
         height: 100%;
         overflow: hidden;
-        box-shadow: 8px 0px 5px -5px rgb(0 0 0 / 50%);
         overflow-x: hidden;
         overflow-y: auto;
     }
