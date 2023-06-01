@@ -39,3 +39,10 @@ left: unset;
     color: darkblue;
     margin: 0;
 }
+
+.custom-nav > ul{
+    list-style: none;
+}
+.custom-nav > ul a{
+    text-decoration: none;
+}
