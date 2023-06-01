@@ -39,10 +39,65 @@ left: unset;
     color: darkblue;
     margin: 0;
 }
-
+.custom-nav{
+    background-color: darkslateblue;
+}
 .custom-nav > ul{
     list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    box-shadow: 0px 0px 4px inset black;
+    box-shadow: 0px 0px 6px black;
 }
-.custom-nav > ul a{
+.custom-nav > ul > li:first-child{
+    margin-left: 0;
+}
+.custom-nav > ul > li:last-child{
+    margin-right: 0;
+}
+.custom-nav > ul > li{
+    margin-inline: 1rem;
+    padding: .5rem 0.2rem;
+}
+.custom-nav > ul > li:hover{
+    background-color: #19197085;
+    transition: .4s ease background-color, .4s ease border-radius;
+}
+.custom-nav > ul > li > a{
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 9rem;
+}
+.custom-nav > ul > li > a > span, .custom-nav > ul > li > a > i{
+    color: whitesmoke;
+    text-align: center;
+}
+.custom-nav > ul > li > a > i{
+    padding: .5rem;
+    border-radius: 50%;
+}
+.custom-nav > ul > li:hover > a > i{
+    transform: scale(1.5);
+    background-color: #19197000;
+    margin-block: 0.5rem;
+    transition: .4s ease transform, .4s ease height .4s, .4s ease opacity .4s, .4s ease margin-block .4s, .4s ease background-color;
+}
+.custom-nav > ul > li:not(:hover) > a > i{
+    transform: scale(1.8);
+    background-color: #19197085;
+    margin-block: 1rem;
+    transition: .8s ease transform .8s, .8s ease margin-block, .8s ease background-color .8s;
+}
+.custom-nav > ul > li:hover > a > span{
+    transition: .4s ease height .4s, .4s ease opacity .4s;
+    height: 24px;
+    opacity: 1;
+}   
+.custom-nav > ul > li:not(:hover) > a > span{
+    transition: .8s ease height, .2s ease opacity;
+    height: 0px;
+    opacity: 0;
 }
