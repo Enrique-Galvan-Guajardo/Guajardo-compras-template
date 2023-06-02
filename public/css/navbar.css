@@ -147,7 +147,7 @@ left: unset;
         box-shadow: 8px 0px 5px -5px rgb(0 0 0 / 50%);
     }
     .custom-nav > ul{
-        padding-top: 4rem;
+        padding-block: 4rem;
         flex-direction: column;
         height: 100%;
         overflow: hidden;
@@ -179,11 +179,11 @@ left: unset;
         }
     .custom-nav > ul > li:first-child{
         margin-left: unset;
-        margin-top: 0;
+        margin-top: auto;
     }
     .custom-nav > ul > li:last-child{
         margin-right: unset;
-        margin-bottom: 0;
+        margin-bottom: auto;
     }
     .custom-nav > ul > li{
         margin-inline: unset;
