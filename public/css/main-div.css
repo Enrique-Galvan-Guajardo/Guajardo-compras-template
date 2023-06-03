@@ -7,10 +7,46 @@
     width: 100%;
     z-index: 0;
 }
+.diag-today > div{
+    flex-direction: column-reverse;
+}
+.diag-today .count-today{
+    font-size: 12rem;
+    font-family: 'Futura Bold Italic';
+    color: rgb(147 147 197);
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+}
+.diag-today .count-today > span:first-child{
+    text-shadow: 8px 0px 0px rgb(47 42 125 / 65%);
+}
+.diag-today .list-group-item:hover{
+    background-color: #483d8b;
+    border-color: #2f2a7d;
+    color: #fff;
+}
+.diag-today .list-group-item > div > h5 > small{
+    color: dimgray;
+}
+.diag-today .list-group-item:hover > div > h5 > small{
+    color: #fff;
+}
+/*
+.diag-today .count-today > span:first-child{
+    letter-spacing: -4rem;
+}
+*/
+.diag-today .count-today > span:last-child{
+    font-size: xxx-large;
+}
 /* Estilos para pantallas grandes y superiores */
 @media (min-width: 768px) {
     .main-div{
         padding: 5rem 0rem 0rem 8rem;
         margin: 0;
+    }
+    .diag-today > div{
+        flex-direction: row;
     }
 }

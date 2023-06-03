@@ -1,5 +1,5 @@
 nav.navbar{
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 1;
     box-shadow: 118px 0px 5px 0px rgb(0 0 0 / 50%);
@@ -10,7 +10,6 @@ nav.navbar > .navbar-brand > .logo{
     height: 2rem;
     width: auto;
     transform: scale(1.5);
-    border-radius: 50%;
 }
 nav.navbar > .navbar-brand{
     display: flex;
@@ -60,7 +59,7 @@ left: unset;
 }
 .custom-nav{
     background-color: darkslateblue;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 56px;
     
@@ -157,7 +156,7 @@ left: unset;
     /* Agrega tus estilos específicos para pantallas grandes y superiores aquí */
     .custom-nav{
         width: 7rem;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         top: 0;
     }
