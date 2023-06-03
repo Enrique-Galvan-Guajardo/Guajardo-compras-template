@@ -1,0 +1,16 @@
+.main-div{
+    padding: 10rem 0rem 0rem;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+/* Estilos para pantallas grandes y superiores */
+@media (min-width: 768px) {
+    .main-div{
+        padding: 5rem 0rem 0rem 8rem;
+        margin: 0;
+    }
+}
