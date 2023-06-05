@@ -1,44 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantalla de carga</title>
-    <!--Links to stylesheets-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./public/css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap">
-    
-    <!--Links to javascript files-->
-    <!--Bootstrap 5-->
-    <script src="./public/js/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/89ee7a970b.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="loading-page" class="loading-page">
-        <div>
-            <div>
-                <div class="item-basket">
-                    <svg class="icon-xl2 tomate-hd"></svg>
-                </div>
-                <h3 class="m-0 text-capitalize">Tomate</h3>
-            </div>
-            <div>
-                <div class="basket">
-                    <svg class="icon-xl2 cesta-hd"></svg>
-                </div>
-                <p class="text-info font-weight-bold my-3 basket-points">100</p>
-                <div class="mx-2 mb-4">
-                    <small class="text-muted">¡Usa la tecla <kbd>R</kbd> para cambiar el producto, y la tecla <kbd>Space</kbd> para dejarlo caer!</small>
-                </div>
-                <h6 class="text-muted">Cargando...</h6>
-            </div>
-        </div>
-    </div>
+window.addEventListener('load', function() {
+    // Obtenemos el elemento del overlay de carga
+    var load_page = document.getElementById('loading-page');
+    // Agregamos la clase 'hidden' para desvanecer el overlay de carga
+    load_page.classList.add('disappear');
+    // Eliminamos la propiedad 'hidden' para permitir el movimiento de la página luego de eliminar la pantalla de carga
+    document.body.style.overflow = "";
+});
 
-    <script>
         const item_basket = document.querySelector('.item-basket');
         const basket_points = document.querySelectorAll('.basket-points');
         const basket = document.querySelector('.basket');
@@ -177,6 +145,4 @@
                 }, 2000); 
             }
         }
-    </script>
-</body>
-</html>
+    
