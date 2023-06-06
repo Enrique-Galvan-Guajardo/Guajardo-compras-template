@@ -161,23 +161,15 @@
             
             <div class="m-3">
                 <form>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group form-check">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div class="row mb-5">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 form-section">
+                            <div class="form-group col-12">
+                                <label for="order_description">Descripción:</label>
+                                <textarea class="form-control" id="order_description" rows="3"></textarea>
+                                <small id="order_description_Help" class="form-text text-danger">Este espacio no debe estar vacío.</small>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 ticket-view">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 ticket-view">
                             <div class="col-lg-8 bg-white px-3 mx-auto border-left border-right">
                                 <ul class="m-0 p-0">
                                     <li></li>
@@ -198,24 +190,58 @@
                                     <li></li>
                                     <li></li>
                                 </ul>
-                                <p class="text-muted text-right"><small>05/06/2023</small></p>
-                                <p class="text-dark text-center">Productos añadidos a esta orden</p>
-                                <div class="row pt-3">
+                                <p class="text-muted text-right mt-2"><small>05/06/2023</small></p>
+                                <h5 class="text-dark text-center">
+                                    Registro de pedidos en esta orden
+                                </h5>
+                                <div class="row pt-3 transport">
                                     <div class="col-12 text-center mb-4 text-muted">Información adicional</div>
-                                    <div class="col-6">De:</div>
-                                    <div class="col-6">Para:</div>
+                                    <div class="row w-100">
+                                        <div class="col-6 text-center">- Desde -</div>
+                                        <div class="col-6 text-center">- Hacia -</div>
+                                        <div class="col-12 d-flex">
+                                            <div class="col-5 text-center">Juarez</div>
+                                            <div class="col-2 text-center d-flex"><i class="fa fa-arrow-right my-auto" aria-hidden="true"></i></div>
+                                            <div class="col-5 text-center">Río Bravo</div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="col-5 text-center">Juarez</div>
+                                            <div class="col-2 text-center d-flex"><i class="fa fa-arrow-left my-auto" aria-hidden="true"></i></div>
+                                            <div class="col-5 text-center">Río Bravo</div>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-outline-primary btn-sm mx-auto mt-4">
+                                        Desplegar lista    
+                                    </button>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-2">#</div>
-                                    <div class="col-6">Nombre</div>
-                                    <div class="col-4">Cantidad</div>
+                                    <div class="col-4 text-center">Nombre</div>
+                                    <div class="col-4 text-right">Cantidad</div>
+                                    <div class="col-2">Total</div>
                                 </div>
                                     <ul class="px-0 py-3 m-0 prod-list">
                                         <li>
-                                            <div class="row">
+                                            <div class="row my-2">
                                                 <div class="ml-4 col-6">Tomate Saladette</div>
-                                                <div class="col-4 text-right">10</div>
+                                                <div class="col-3">10 <span class="text-danger">- 5</span></div>
+                                                <div class="col-2 text-right text-primary">5</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row my-2">
+                                                <div class="ml-4 col-6">Aguacate Hass</div>
+                                                <div class="col-3">20 <span class="text-danger"></span></div>
+                                                <div class="col-2 text-right text-primary">20</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row my-2">
+                                                <div class="ml-4 col-6">Sandía sin semilla</div>
+                                                <div class="col-3">15 <span class="text-danger">- 3</span></div>
+                                                <div class="col-2 text-right text-primary">12</div>
                                             </div>
                                         </li>
                                     </ul>
@@ -241,9 +267,14 @@
                                 </ul>    
                             </div>
                         </div>
+                        <div class="toggle-table">
+                            
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
+                    <button type="submit" class="col-12 col-sm-12 col-md-6 col-lg-6 btn btn-success btn-lg btn-block">
+                        Guardar
+                    </button>
+                </form>
             </div>
         </div>
     </div>
