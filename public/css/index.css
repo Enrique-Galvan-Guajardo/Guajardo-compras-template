@@ -8,6 +8,7 @@
 @import "./table-products.css";
 @import "./navbar.css";
 @import "./main-div.css";
+@import "./nueva-solicitud.css";
 
 body{
     font-family: 'Hind', sans-serif;

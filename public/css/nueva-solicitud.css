@@ -1,0 +1,40 @@
+.ticket-view > div > ul.prod-list {
+    list-style: decimal-leading-zero;
+}
+.ticket-view > div > ul.prod-list > li {
+    margin-left: 1rem;
+}
+.ticket-view > div > ul.prod-list > li::marker {
+    color: slategray;
+}
+  
+.ticket-view > div > ul:first-child,.ticket-view > div > ul:last-child {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.ticket-view > div > ul:first-child > li::before, .ticket-view > div > ul:last-child > li::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    margin: 0px auto 0px auto;
+    display: flex;
+}
+
+.ticket-view > div > ul:first-child > li::before{
+    border-top: 16px solid #f5f5f5;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 0px solid transparent;
+}
+.ticket-view > div > ul:last-child > li::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 0px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid #f5f5f5;
+    margin: 0px auto 0px auto;
+    display: flex;
+}
