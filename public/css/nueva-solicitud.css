@@ -40,7 +40,20 @@
     border-right: 11px solid transparent;
     border-bottom: 12px solid #f5f5f5;
 }
-
+.toggle-table > div.product-card{
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    top: 9rem;
+    z-index: 1;
+}
+.toggle-table.open > div.product-card{
+    transition: 1s ease left;
+    left: 0%;
+}
+.toggle-table:not(.open) > div.product-card{
+    transition: .5s ease left;
+}
 /* Estilos para pantallas grandes y superiores */
 @media (min-width: 768px) {
     .ticket-view > div > ul:first-child > li::before{
@@ -54,5 +67,12 @@
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-bottom: 12px solid #f5f5f5;
+    }
+    .toggle-table > div.product-card{
+        width: 50vw;
+        top: 15rem;
+    }
+    .toggle-table.open > div.product-card {
+        left: 10%;
     }
 }
