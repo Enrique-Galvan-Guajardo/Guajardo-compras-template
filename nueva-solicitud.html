@@ -161,16 +161,30 @@
             
             <div class="m-3">
                 <form>
-                    <div class="row mb-5">
+                    <div class="row">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 form-section">
+                            <div class="form-group col-12">
+                                <label for="order_title">Título:</label>
+                                <input class="form-control" type="text" placeholder="Escribe...">
+                                <small class="form-text text-danger">Este espacio no debe estar vacío.</small>
+                            </div>
                             <div class="form-group col-12">
                                 <label for="order_description">Descripción:</label>
                                 <textarea class="form-control" id="order_description" rows="3"></textarea>
-                                <small id="order_description_Help" class="form-text text-danger">Este espacio no debe estar vacío.</small>
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="order-selection">Selecciona una orden</label>
+                                <select class="form-control" id="order-selection">
+                                    <option value="0" disabled selected>Selecciona una opción</option>
+                                    <option value="1">Orden rápida Río Bravo</option>
+                                    <option value="2">Orden administrativa Juarez</option>
+                                    <option value="3">Orden urgente Jarachina</option>
+                                    <option value="4">Orden personalizada GUANZA</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 ticket-view">
-                            <div class="col-sm-6 col-md-12 col-lg-6 bg-white px-3 mx-auto border-left border-right">
+                            <div class="col-sm-6 col-md-12 col-lg-6 bg-white px-3 mx-auto mb-5 border-left border-right">
                                 <ul class="m-0 p-0">
                                     <li class="mx-auto"></li>
                                     <li class="mx-auto"></li>
@@ -246,11 +260,19 @@
                                     <li class="mx-auto"></li>
                                 </ul>    
                             </div>
+                            <button type="submit" class="col-12 col-sm-12 col-md-6 col-lg-6 btn btn-success btn-lg mx-auto d-flex">
+                                Guardar
+                            </button>    
                         </div>
                         <div class="toggle-table">
                             <div class="card text-center product-card">
                                 <div class="card-header">
-                                    <p>Solicitud de pedido</p>
+                                    <p>
+                                        Solicitud de pedido 
+                                        <button type="button" class="close close_product_table">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </p>
                                   <ul class="nav nav-tabs card-header-tabs" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <a class="nav-link active" id="product-table-tab" data-toggle="tab" href="#product-table" role="tab" aria-controls="product-table" aria-selected="true">Añadir al pedido</a>
@@ -574,9 +596,6 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="col-12 col-sm-12 col-md-4 col-lg-4 btn btn-success btn-lg">
-                        Guardar
-                    </button>
                 </form>
             </div>
         </div>
@@ -584,10 +603,15 @@
     <!--Links to javascript files-->
     <script>
         const btn_show_list = document.querySelector('.desplegar-lista');
+        const btn_hide_list = document.querySelector('.close_product_table');
         const toogle_table = document.querySelector('.toggle-table');
         let startX = 0;
         let isSwiping = false;
         btn_show_list.addEventListener('click', function() {
+            // Llamar a la función de tirar item aquí
+            toogle_table.classList.toggle('open');
+        });
+        btn_hide_list.addEventListener('click', function() {
             // Llamar a la función de tirar item aquí
             toogle_table.classList.toggle('open');
         });
