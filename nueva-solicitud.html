@@ -161,6 +161,10 @@
             
             <div class="m-3">
                 <form>
+                    <div class="mx-3">
+                        <h3 class="text-secondary">Paso 1</h3>
+                        <p class="text-dark">Llena la información necesaria de tu solicitud.</p>
+                    </div>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 form-section">
                             <div class="form-group col-12">
@@ -172,431 +176,475 @@
                                 <label for="order_description">Descripción:</label>
                                 <textarea class="form-control" id="order_description" rows="3"></textarea>
                             </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4">
                             <div class="form-group col-12">
-                                <label for="order-selection">Selecciona una orden</label>
-                                <select class="form-control" id="order-selection">
+                                <label for="order-dest">Orden realizada desde:</label>
+                                <input class="form-control" type="text" placeholder="Juarez Matriz" readonly>
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="order-dest">Selecciona el destino de la orden:</label>
+                                <select class="form-control" id="order-dest">
                                     <option value="0" disabled selected>Selecciona una opción</option>
-                                    <option value="1">Orden rápida Río Bravo</option>
-                                    <option value="2">Orden administrativa Juarez</option>
-                                    <option value="3">Orden urgente Jarachina</option>
-                                    <option value="4">Orden personalizada GUANZA</option>
+                                    <option value="1">Río Bravo</option>
+                                    <option value="2">Juarez</option>
+                                    <option value="3">Jarachina</option>
                                 </select>
+                                <small class="form-text text-danger">Este espacio no debe estar vacío.</small>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 ticket-view">
-                            <div class="col-sm-6 col-md-12 col-lg-6 bg-white px-3 mx-auto mb-5 border-left border-right">
-                                <ul class="m-0 p-0">
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                </ul>
-                                <p class="text-muted text-right mt-2"><small>05/06/2023</small></p>
-                                <h5 class="text-dark text-center">
-                                    Registro de pedidos en esta orden
-                                </h5>
-                                <div class="row pt-3 transport">
-                                    <div class="col-12 text-center mb-4 text-muted">Información adicional</div>
-                                    <div class="row w-100">
-                                        <div class="col-6 text-center">- Desde -</div>
-                                        <div class="col-6 text-center">- Hacia -</div>
-                                        <div class="col-12 d-flex">
-                                            <div class="col-5 text-center">Juarez</div>
-                                            <div class="col-2 text-center d-flex"><i class="fa fa-arrow-right my-auto" aria-hidden="true"></i></div>
-                                            <div class="col-5 text-center">Río Bravo</div>
-                                        </div>
-                                        <div class="col-12 d-flex">
-                                            <div class="col-5 text-center">Juarez</div>
-                                            <div class="col-2 text-center d-flex"><i class="fa fa-arrow-left my-auto" aria-hidden="true"></i></div>
-                                            <div class="col-5 text-center">Río Bravo</div>
-                                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 mx-3">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                Guardar solicitud
+                            </button>   
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="m-3">
+                <div class="mx-3">
+                    <h3 class="text-secondary">Paso 2</h3>
+                    <p class="text-dark">Selecciona tu solicitud y asigna los productos necesarios para realizar la orden.</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 form-section">
+                        <div class="form-group col-12">
+                            <label for="order-selection">Selecciona una orden:</label>
+                            <select class="form-control" id="order-selection">
+                                <option value="0" disabled selected>Selecciona una opción</option>
+                                <option value="1">Orden rápida Río Bravo</option>
+                                <option value="2">Orden administrativa Juarez</option>
+                                <option value="3">Orden urgente Jarachina</option>
+                                <option value="4">Orden personalizada GUANZA</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="order_description">Descripción:</label>
+                            <textarea class="form-control" rows="3" readonly>Orden solicitada para rellenar stock.</textarea>
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="order-dest">Orden realizada desde:</label>
+                            <input class="form-control" type="text" placeholder="Juarez Matriz" readonly>
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="order-dest">Selecciona el destino de la orden:</label>
+                            <input class="form-control" type="text" placeholder="Río Bravo" readonly>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 my-4 ticket-view">
+                        <div class="col-sm-6 col-md-12 col-lg-6 bg-white px-3 mx-auto mb-5 border-left border-right">
+                            <ul class="m-0 p-0">
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                            </ul>
+                            <p class="text-muted text-right mt-2"><small>05/06/2023</small></p>
+                            <h5 class="text-dark text-center">
+                                Registro de pedidos en esta orden
+                            </h5>
+                            <div class="row pt-3 transport">
+                                <div class="col-12 text-center mb-4 text-muted">Información adicional</div>
+                                <div class="row w-100">
+                                    <div class="col-6 text-center">- Desde -</div>
+                                    <div class="col-6 text-center">- Hacia -</div>
+                                    <div class="col-12 d-flex">
+                                        <div class="col-5 text-center">Juarez</div>
+                                        <div class="col-2 text-center d-flex"><i class="fa fa-arrow-right my-auto" aria-hidden="true"></i></div>
+                                        <div class="col-5 text-center">Río Bravo</div>
                                     </div>
-
-                                    <button type="button" class="btn btn-outline-primary btn-sm mx-auto mt-4 desplegar-lista">
-                                        Desplegar lista    
-                                    </button>
+                                    <div class="col-12 d-flex">
+                                        <div class="col-5 text-center">Juarez</div>
+                                        <div class="col-2 text-center d-flex"><i class="fa fa-arrow-left my-auto" aria-hidden="true"></i></div>
+                                        <div class="col-5 text-center">Río Bravo</div>
+                                    </div>
                                 </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-2">#</div>
-                                    <div class="col-4">Nombre</div>
-                                    <div class="col-3">Cant.</div>
-                                    <div class="col-3">Total</div>
-                                </div>
-                                    <ul class="px-0 py-3 m-0 prod-list">
-                                        
-                                    </ul>
-                                <hr>
-                                <ul class="m-0 p-0">
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                    <li class="mx-auto"></li>
-                                </ul>    
+    
+                                <button type="button" class="btn btn-outline-primary btn-sm mx-auto mt-4 desplegar-lista">
+                                    Desplegar lista    
+                                </button>
                             </div>
-                            <button type="submit" class="col-12 col-sm-12 col-md-6 col-lg-6 btn btn-success btn-lg mx-auto d-flex">
-                                Guardar
-                            </button>    
+                            <hr>
+                            <div class="row">
+                                <div class="col-2">#</div>
+                                <div class="col-4">Nombre</div>
+                                <div class="col-3">Cant.</div>
+                                <div class="col-3">Total</div>
+                            </div>
+                                <ul class="px-0 py-3 m-0 prod-list">
+                                    
+                                </ul>
+                            <hr>
+                            <ul class="m-0 p-0">
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                                <li class="mx-auto"></li>
+                            </ul>    
                         </div>
-                        <div class="toggle-table">
-                            <div class="card text-center product-card">
-                                <div class="card-header">
-                                    <p>
-                                        Solicitud de pedido 
-                                        <button type="button" class="close close_product_table">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </p>
-                                  <ul class="nav nav-tabs card-header-tabs" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link active" id="product-table-tab" data-toggle="tab" href="#product-table" role="tab" aria-controls="product-table" aria-selected="true">Añadir al pedido</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estadística</a>
-                                        <div class="dropdown-menu">
-                                          <a class="dropdown-item" id="most-asked-product-table-tab" data-toggle="tab" href="#most-asked-product-table" role="tab" aria-controls="most-asked-product-table" aria-selected="false">Más pedidos</a>
-                                          <a class="dropdown-item" id="less-asked-product-table-tab" data-toggle="tab" href="#less-asked-product-table" role="tab" aria-controls="less-asked-product-table" aria-selected="false">Menos pedidos</a>
-                                          <div class="dropdown-divider"></div>
-                                          <a class="dropdown-item" id="match-failed-product-table-tab" data-toggle="tab" href="#match-failed-product-table" role="tab" aria-controls="match-failed-product-table" aria-selected="false">Productos que más han fallado en match</a>
-                                        </div>
-                                      </li>
-                                  </ul>
-                                </div>
-                                <div class="card-body tab-content">
-                                    <div class="tab-pane fade show active" id="product-table" role="tabpanel" aria-labelledby="product-table-tab">
-                                        <h3 class="card-title">Lista de productos</h3>
-                                        <p>Selecciona los productos y cantidades necesarias para esta orden.</p>
-                                        <div class="order-filter-setup">
-                                          
-                                          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                            <li class="nav-item ml-auto" role="presentation">
-                                              <a class="nav-link active" id="pills-search-tab" data-toggle="pill" href="#pills-search" role="tab" aria-controls="pills-search" aria-selected="true">
-                                                Buscar
-                                              </a>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                              <a class="nav-link" id="pills-filter-tab" data-toggle="pill" href="#pills-filter" role="tab" aria-controls="pills-filter" aria-selected="false">
-                                                Filtrar por
-                                              </a>
-                                            </li>
-                                          </ul>
-                                          <div class="tab-content" id="pills-tabContent">
-                                            <div class="tab-pane fade show active" id="pills-search" role="tabpanel" aria-labelledby="pills-search-tab">
-                                              <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                  <span class="input-group-text">
-                                                    <svg class="icon-xsm busqueda-hd"></svg>
-                                                  </span>
-                                                </div>
-                                                <input id="input-products-search" type="text" class="form-control" aria-label="Input for search" aria-describedby="inputGroup-search-bar" placeholder="Escribe...">
-                                                 
-                                              </div>
+                        <button type="submit" class="col-12 col-sm-12 col-md-6 col-lg-6 btn btn-success btn-lg mx-auto d-flex">
+                            Guardar orden
+                        </button>    
+                    </div>
+                    <div class="toggle-table">
+                        <div class="card text-center product-card shadow">
+                            <div class="card-header">
+                                <p>
+                                    Solicitud de pedido 
+                                    <button type="button" class="close close_product_table">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </p>
+                              <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="product-table-tab" data-toggle="tab" href="#product-table" role="tab" aria-controls="product-table" aria-selected="true">Añadir al pedido</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estadística</a>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" id="most-asked-product-table-tab" data-toggle="tab" href="#most-asked-product-table" role="tab" aria-controls="most-asked-product-table" aria-selected="false">Más pedidos</a>
+                                      <a class="dropdown-item" id="less-asked-product-table-tab" data-toggle="tab" href="#less-asked-product-table" role="tab" aria-controls="less-asked-product-table" aria-selected="false">Menos pedidos</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" id="match-failed-product-table-tab" data-toggle="tab" href="#match-failed-product-table" role="tab" aria-controls="match-failed-product-table" aria-selected="false">Productos que más han fallado en match</a>
+                                    </div>
+                                  </li>
+                              </ul>
+                            </div>
+                            <div class="card-body tab-content">
+                                <div class="tab-pane fade show active" id="product-table" role="tabpanel" aria-labelledby="product-table-tab">
+                                    <h3 class="card-title">Lista de productos</h3>
+                                    <p>Selecciona los productos y cantidades necesarias para esta orden.</p>
+                                    <div class="order-filter-setup">
+                                      
+                                      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item ml-auto" role="presentation">
+                                          <a class="nav-link active" id="pills-search-tab" data-toggle="pill" href="#pills-search" role="tab" aria-controls="pills-search" aria-selected="true">
+                                            Buscar
+                                          </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <a class="nav-link" id="pills-filter-tab" data-toggle="pill" href="#pills-filter" role="tab" aria-controls="pills-filter" aria-selected="false">
+                                            Filtrar por
+                                          </a>
+                                        </li>
+                                      </ul>
+                                      <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-search" role="tabpanel" aria-labelledby="pills-search-tab">
+                                          <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text">
+                                                <svg class="icon-xsm busqueda-hd"></svg>
+                                              </span>
                                             </div>
-                                            <div class="tab-pane fade" id="pills-filter" role="tabpanel" aria-labelledby="pills-filter-tab">
-                                              <div class="row">
-                                                <div class="input-group mb-3 col-12 col-sm-6">
-                                                  <div class="input-group-prepend">
-                                                    <label class="input-group-text" for="inputProductCategory">Categoría</label>
-                                                  </div>
-                                                  <select class="custom-select" id="inputProductCategory">
-                                                    <option selected value="all">Seleccionar...</option>
-                                                    <option value="Frutas y Verduras">Frutas y Verduras</option>
-                                                    <option value="Panadería">Panadería</option>
-                                                    <option value="Carnicería">Carnicería</option>
-                                                  </select>
-                                                </div>
-                                                <div class="input-group mb-3 col-12 col-sm-6">
-                                                  <div class="input-group-prepend">
-                                                    <label class="input-group-text" for="inputProductSubCategory">Sub Categoría</label>
-                                                  </div>
-                                                  <select class="custom-select" id="inputProductSubCategory">
-                                                    <option selected value="all">Seleccionar...</option>
-                                                    <option value="Tomate">Tomate</option>
-                                                    <option value="Pan de molde">Pan de molde</option>
-                                                    <option value="Carnes rojas">Carnes rojas</option>
-                                                    <option value="Carnes blancas">Carnes blancas</option>
-                                                  </select>
-                                                </div>
+                                            <input id="input-products-search" type="text" class="form-control" aria-label="Input for search" aria-describedby="inputGroup-search-bar" placeholder="Escribe...">
+                                             
+                                          </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-filter" role="tabpanel" aria-labelledby="pills-filter-tab">
+                                          <div class="row">
+                                            <div class="input-group mb-3 col-12 col-sm-6">
+                                              <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputProductCategory">Categoría</label>
                                               </div>
+                                              <select class="custom-select" id="inputProductCategory">
+                                                <option selected value="all">Seleccionar...</option>
+                                                <option value="Frutas y Verduras">Frutas y Verduras</option>
+                                                <option value="Panadería">Panadería</option>
+                                                <option value="Carnicería">Carnicería</option>
+                                              </select>
+                                            </div>
+                                            <div class="input-group mb-3 col-12 col-sm-6">
+                                              <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputProductSubCategory">Sub Categoría</label>
+                                              </div>
+                                              <select class="custom-select" id="inputProductSubCategory">
+                                                <option selected value="all">Seleccionar...</option>
+                                                <option value="Tomate">Tomate</option>
+                                                <option value="Pan de molde">Pan de molde</option>
+                                                <option value="Carnes rojas">Carnes rojas</option>
+                                                <option value="Carnes blancas">Carnes blancas</option>
+                                              </select>
                                             </div>
                                           </div>
-                    
-                                          <input type="hidden" name="filter_value">
                                         </div>
-                                        
-                                        <div class="table-space">
-                                          <table id="order-table" class="table table-striped table-hover table-responsive">
-                                              <thead class="thead-dark">
-                                                <tr>
-                                                  <th scope="col">#</th>
-                                                  <th scope="col">Nombre</th>
-                                                  <th class="hide-th" scope="col">Familia</th>
-                                                  <th class="hide-th" scope="col">Sub Familia</th>
-                                                  <th scope="col">Cantidad</th>
-                                                  <th class="hide-th" scope="col">Presentación</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr id="product_item_1" class="row-item">
-                                                  <th scope="row">
-                                                    <p>1</p>
-                                                    <div class="product_item_tag mt-4"></div>
-                                                  </th>
-                                                  <td class="row-item-spec">
-                                                    <p class="mt-2 mb-0">Tomate saladette</p>
-                                                    <div title="Frutas y Verduras > Tomate">
-                                                      <svg class="icon-xl tomate-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Frutas y Verduras</td>
-                                                  <td class="hide-td">Tomate</td>
-                                                  <td class="row-item-count hide-input">
-                                                    <div class="input-group">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-info" type="button"><div>+</div></button>
-                                                      </div>
-                                                      <input id="product_item_1_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-danger" type="button"><div>-</div></button>
-                                                      </div>
-                                                    </div>
-                                                    <div>
-                                                      <div><span>0</span>&nbsp;<small class="text-muted">Cajas</small></div>
-                                                      <svg class="icon-lg caja-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Caja</td>
-                                                </tr>
-                                                <tr id="product_item_2" class="row-item">
-                                                  <th scope="row">
-                                                    <p>2</p>
-                                                    <div class="product_item_tag mt-4"></div>
-                                                  </th>
-                                                  <td class="row-item-spec">
-                                                    <p class="mt-2 mb-0">Pan blanco</p>
-                                                    <div title="Panadería > Pan de molde">
-                                                      <svg class="icon-xl pan-de-molde-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Panadería</td>
-                                                  <td class="hide-td">Pan de molde</td>
-                                                  <td class="row-item-count hide-input">
-                                                    <div class="input-group">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-info" type="button"><div>+</div></button>
-                                                      </div>
-                                                      <input id="product_item_2_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-danger" type="button"><div>-</div></button>
-                                                      </div>
-                                                    </div>
-                                                    <div>
-                                                      <div><span>0</span>&nbsp;<small class="text-muted">Bolsas</small></div>
-                                                      <svg class="icon-lg bolsa-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Bolsa</td>
-                                                </tr>
-                                                <tr id="product_item_3" class="row-item">
-                                                  <th scope="row">
-                                                    <p>3</p>
-                                                    <div class="product_item_tag mt-4"></div>
-                                                  </th>
-                                                  <td class="row-item-spec">
-                                                    <p class="mt-2 mb-0">Carne de res</p>
-                                                    <div title="Carnicería > Carnes rojas">
-                                                      <svg class="icon-xl carne-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Carnicería</td>
-                                                  <td class="hide-td">Carnes rojas</td>
-                                                  <td class="row-item-count hide-input">
-                                                    <div class="input-group">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-info" type="button"><div>+</div></button>
-                                                      </div>
-                                                      <input id="product_item_3_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-danger" type="button"><div>-</div></button>
-                                                      </div>
-                                                    </div>
-                                                    <div>
-                                                      <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
-                                                      <svg class="icon-lg kilogramos-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Kilogramos</td>
-                                                </tr>
-                                                <tr id="product_item_4" class="row-item">
-                                                  <th scope="row">
-                                                    <p>4</p>
-                                                    <div class="product_item_tag mt-4"></div>
-                                                  </th>
-                                                  <td class="row-item-spec">
-                                                    <p class="mt-2 mb-0">Galletas oreo</p>
-                                                    <div title="Dulcería > Galletas">
-                                                      <svg class="icon-xl galletas-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Dulcería</td>
-                                                  <td class="hide-td">Galletas</td>
-                                                  <td class="row-item-count hide-input">
-                                                    <div class="input-group">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-info" type="button"><div>+</div></button>
-                                                      </div>
-                                                      <input id="product_item_4_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-danger" type="button"><div>-</div></button>
-                                                      </div>
-                                                    </div>
-                                                    <div>
-                                                      <div><span>0</span>&nbsp;<small class="text-muted">Paquetes</small></div>
-                                                      <svg class="icon-lg paquete-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Paquetes</td>
-                                                </tr>
-                                                <tr id="product_item_5" class="row-item">
-                                                  <th scope="row">
-                                                    <p>5</p>
-                                                    <div class="product_item_tag mt-4"></div>
-                                                  </th>
-                                                  <td class="row-item-spec">
-                                                    <p class="mt-2 mb-0">Queso manchego</p>
-                                                    <div title="Lácteos > Quesos">
-                                                      <svg class="icon-xl queso-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Lácteos</td>
-                                                  <td class="hide-td">Quesos</td>
-                                                  <td class="row-item-count hide-input">
-                                                    <div class="input-group">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-info" type="button"><div>+</div></button>
-                                                      </div>
-                                                      <input id="product_item_5_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-danger" type="button"><div>-</div></button>
-                                                      </div>
-                                                    </div>
-                                                    <div>
-                                                      <div><span>0</span>&nbsp;<small class="text-muted">Pieza</small></div>
-                                                      <svg class="icon-lg pieza-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Pieza</td>
-                                                </tr>
-                                                <tr id="product_item_6" class="row-item">
-                                                  <th scope="row">
-                                                    <p>6</p>
-                                                    <div class="product_item_tag mt-4"></div>
-                                                  </th>
-                                                  <td class="row-item-spec">
-                                                    <p class="mt-2 mb-0">Pescado</p>
-                                                    <div title="Carnicería > Carnes blancas">
-                                                      <svg class="icon-xl pez-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Carnicería</td>
-                                                  <td class="hide-td">Carnes blancas</td>
-                                                  <td class="row-item-count hide-input">
-                                                    <div class="input-group">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-info" type="button"><div>+</div></button>
-                                                      </div>
-                                                      <input id="product_item_6_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-danger" type="button"><div>-</div></button>
-                                                      </div>
-                                                    </div>
-                                                    <div>
-                                                      <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
-                                                      <svg class="icon-lg kilogramos-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Kilogramos</td>
-                                                </tr>
-                                                <tr id="product_item_7" class="row-item">
-                                                  <th scope="row">
-                                                    <p>7</p>
-                                                    <div class="product_item_tag mt-4"></div>
-                                                  </th>
-                                                  <td class="row-item-spec">
-                                                    <p class="mt-2 mb-0">Trucha</p>
-                                                    <div title="Carnicería > Carnes blancas">
-                                                      <svg class="icon-xl pez-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Carnicería</td>
-                                                  <td class="hide-td">Carnes blancas</td>
-                                                  <td class="row-item-count hide-input">
-                                                    <div class="input-group">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-info" type="button"><div>+</div></button>
-                                                      </div>
-                                                      <input id="product_item_7_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
-                                                      <div class="input-group-prepend">
-                                                        <button class="btn btn-outline-danger" type="button"><div>-</div></button>
-                                                      </div>
-                                                    </div>
-                                                    <div>
-                                                      <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
-                                                      <svg class="icon-lg kilogramos-hd"></svg>
-                                                    </div>
-                                                  </td>
-                                                  <td class="hide-td">Kilogramos</td>
-                                                </tr>
-                                              </tbody>
-                                          </table>
-                                        </div>
+                                      </div>
                                     </div>
-                                    <div class="tab-pane fade" id="most-asked-product-table" role="tabpanel" aria-labelledby="most-asked-product-table-tab">
-                                        <h5 class="card-title">Más solicitados</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    
+                                    <div class="table-space">
+                                      <table id="order-table" class="table table-striped table-hover table-responsive">
+                                          <thead class="thead-dark">
+                                            <tr>
+                                              <th scope="col">#</th>
+                                              <th scope="col">Nombre</th>
+                                              <th class="hide-th" scope="col">Familia</th>
+                                              <th class="hide-th" scope="col">Sub Familia</th>
+                                              <th scope="col">Cantidad enviada</th>
+                                              <th class="hide-th" scope="col">Presentación</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr id="product_item_1" class="row-item">
+                                              <th scope="row">
+                                                <p>1</p>
+                                                <div class="product_item_tag mt-4"></div>
+                                              </th>
+                                              <td class="row-item-spec">
+                                                <p class="mt-2 mb-0">Tomate saladette</p>
+                                                <div title="Frutas y Verduras > Tomate">
+                                                  <svg class="icon-xl tomate-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Frutas y Verduras</td>
+                                              <td class="hide-td">Tomate</td>
+                                              <td class="row-item-count hide-input">
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                                  </div>
+                                                  <input id="product_item_1_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div><span>0</span>&nbsp;<small class="text-muted">Cajas</small></div>
+                                                  <svg class="icon-lg caja-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Caja</td>
+                                            </tr>
+                                            <tr id="product_item_2" class="row-item">
+                                              <th scope="row">
+                                                <p>2</p>
+                                                <div class="product_item_tag mt-4"></div>
+                                              </th>
+                                              <td class="row-item-spec">
+                                                <p class="mt-2 mb-0">Pan blanco</p>
+                                                <div title="Panadería > Pan de molde">
+                                                  <svg class="icon-xl pan-de-molde-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Panadería</td>
+                                              <td class="hide-td">Pan de molde</td>
+                                              <td class="row-item-count hide-input">
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                                  </div>
+                                                  <input id="product_item_2_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div><span>0</span>&nbsp;<small class="text-muted">Bolsas</small></div>
+                                                  <svg class="icon-lg bolsa-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Bolsa</td>
+                                            </tr>
+                                            <tr id="product_item_3" class="row-item">
+                                              <th scope="row">
+                                                <p>3</p>
+                                                <div class="product_item_tag mt-4"></div>
+                                              </th>
+                                              <td class="row-item-spec">
+                                                <p class="mt-2 mb-0">Carne de res</p>
+                                                <div title="Carnicería > Carnes rojas">
+                                                  <svg class="icon-xl carne-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Carnicería</td>
+                                              <td class="hide-td">Carnes rojas</td>
+                                              <td class="row-item-count hide-input">
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                                  </div>
+                                                  <input id="product_item_3_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
+                                                  <svg class="icon-lg kilogramos-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Kilogramos</td>
+                                            </tr>
+                                            <tr id="product_item_4" class="row-item">
+                                              <th scope="row">
+                                                <p>4</p>
+                                                <div class="product_item_tag mt-4"></div>
+                                              </th>
+                                              <td class="row-item-spec">
+                                                <p class="mt-2 mb-0">Galletas oreo</p>
+                                                <div title="Dulcería > Galletas">
+                                                  <svg class="icon-xl galletas-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Dulcería</td>
+                                              <td class="hide-td">Galletas</td>
+                                              <td class="row-item-count hide-input">
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                                  </div>
+                                                  <input id="product_item_4_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div><span>0</span>&nbsp;<small class="text-muted">Paquetes</small></div>
+                                                  <svg class="icon-lg paquete-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Paquetes</td>
+                                            </tr>
+                                            <tr id="product_item_5" class="row-item">
+                                              <th scope="row">
+                                                <p>5</p>
+                                                <div class="product_item_tag mt-4"></div>
+                                              </th>
+                                              <td class="row-item-spec">
+                                                <p class="mt-2 mb-0">Queso manchego</p>
+                                                <div title="Lácteos > Quesos">
+                                                  <svg class="icon-xl queso-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Lácteos</td>
+                                              <td class="hide-td">Quesos</td>
+                                              <td class="row-item-count hide-input">
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                                  </div>
+                                                  <input id="product_item_5_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div><span>0</span>&nbsp;<small class="text-muted">Pieza</small></div>
+                                                  <svg class="icon-lg pieza-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Pieza</td>
+                                            </tr>
+                                            <tr id="product_item_6" class="row-item">
+                                              <th scope="row">
+                                                <p>6</p>
+                                                <div class="product_item_tag mt-4"></div>
+                                              </th>
+                                              <td class="row-item-spec">
+                                                <p class="mt-2 mb-0">Pescado</p>
+                                                <div title="Carnicería > Carnes blancas">
+                                                  <svg class="icon-xl pez-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Carnicería</td>
+                                              <td class="hide-td">Carnes blancas</td>
+                                              <td class="row-item-count hide-input">
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                                  </div>
+                                                  <input id="product_item_6_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
+                                                  <svg class="icon-lg kilogramos-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Kilogramos</td>
+                                            </tr>
+                                            <tr id="product_item_7" class="row-item">
+                                              <th scope="row">
+                                                <p>7</p>
+                                                <div class="product_item_tag mt-4"></div>
+                                              </th>
+                                              <td class="row-item-spec">
+                                                <p class="mt-2 mb-0">Trucha</p>
+                                                <div title="Carnicería > Carnes blancas">
+                                                  <svg class="icon-xl pez-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Carnicería</td>
+                                              <td class="hide-td">Carnes blancas</td>
+                                              <td class="row-item-count hide-input">
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-info" type="button"><div>+</div></button>
+                                                  </div>
+                                                  <input id="product_item_7_count" type="number" class="form-control" placeholder="Ingresar cantidad" aria-label="Conjunto de botónes para producto" aria-describedby="Conjunto de botónes para cantidad de unidades" value="0">
+                                                  <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-danger" type="button"><div>-</div></button>
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div><span>0</span>&nbsp;<small class="text-muted">Kilogramos</small></div>
+                                                  <svg class="icon-lg kilogramos-hd"></svg>
+                                                </div>
+                                              </td>
+                                              <td class="hide-td">Kilogramos</td>
+                                            </tr>
+                                          </tbody>
+                                      </table>
                                     </div>
-                                    <div class="tab-pane fade" id="less-asked-product-table" role="tabpanel" aria-labelledby="less-asked-product-table-tab">
-                                        <h5 class="card-title">Menos solicitados</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                    <div class="tab-pane fade" id="match-failed-product-table" role="tabpanel" aria-labelledby="match-failed-product-table-tab">
-                                        <h5 class="card-title">Productos que más fallan en coincidencias</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="most-asked-product-table" role="tabpanel" aria-labelledby="most-asked-product-table-tab">
+                                    <h5 class="card-title">Más solicitados</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="tab-pane fade" id="less-asked-product-table" role="tabpanel" aria-labelledby="less-asked-product-table-tab">
+                                    <h5 class="card-title">Menos solicitados</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="tab-pane fade" id="match-failed-product-table" role="tabpanel" aria-labelledby="match-failed-product-table-tab">
+                                    <h5 class="card-title">Productos que más fallan en coincidencias</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

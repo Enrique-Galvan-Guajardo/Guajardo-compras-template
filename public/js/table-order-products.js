@@ -58,15 +58,15 @@ const items_tr = order_table.getElementsByTagName('tbody')[0].getElementsByTagNa
       // En caso de ser un número negativo, se actualizará el input a 0, de esa manera bloquear el ingreso de números negativos al teclearlos
       element[1].input_count.value = parseInt(0);
       // Por consecuencia, la etiqueta también se actualizará a 0
-      element[2].tag_count.innerHTML = parseInt(element[1].input_count.value);
+      element[2].tag_count.innerHTML = parseFloat(element[1].input_count.value);
     }else if (element[1].input_count.value === '') {
       // En caso de que se eliminen todos los números en el campo y quede vacío, se actualizará el input a 0
       element[1].input_count.value = parseInt(0);
       // Por consecuencia, la etiqueta también se actualizará a 0
-      element[2].tag_count.innerHTML = parseInt(element[1].input_count.value);
+      element[2].tag_count.innerHTML = parseFloat(element[1].input_count.value);
     }else{
       // Por contrario, si el valor ingresado por teclado es mayor a 0, la etiqueta también se actualizará al valor del input
-      element[2].tag_count.innerHTML = parseInt(element[1].input_count.value);
+      element[2].tag_count.innerHTML = parseFloat(element[1].input_count.value);
     }
     // Se enviará la información del elemento a la función que lo catalogue
     set_Product_Tag(element[0].id, parseInt(element[1].input_count.value))
@@ -81,7 +81,7 @@ const items_tr = order_table.getElementsByTagName('tbody')[0].getElementsByTagNa
       element[2].tag_count.innerHTML = element[1].input_count.value;
     }else{
       // Si es falso, significa que el valor se está ingresando por las teclas flecha ARRIBA, por lo cual el input se actualiza automáticamente y sólo resta actualizar la etiqueta
-      element[2].tag_count.innerHTML = parseInt(element[1].input_count.value) + 1;
+      element[2].tag_count.innerHTML = parseFloat(element[1].input_count.value) + 1;
     }
     // Se enviará la información del elemento a la función que lo catalogue
     set_Product_Tag(element[0].id, parseInt(element[1].input_count.value))
@@ -98,7 +98,7 @@ const items_tr = order_table.getElementsByTagName('tbody')[0].getElementsByTagNa
         element[2].tag_count.innerHTML = element[1].input_count.value;
       }else{
         // Si es falso, significa que el valor se está ingresando por las teclas flecha ABAJO y flecha ABAJO, por lo cual el input se actualiza automáticamente y sólo resta actualizar la etiqueta
-        element[2].tag_count.innerHTML = parseInt(element[1].input_count.value) - 1;
+        element[2].tag_count.innerHTML = parseFloat(element[1].input_count.value) - 1;
       }
     }else if (element[1].input_count.value == 0 && !update){
       // Si el valor del input es igual a 0 y el valor de update es falso, significa que se está intentando actualizar el input con flecha ABAJO hacia valores negativos, lo cual no está permitido, entonces siempre se sumará un 1 cuando intente llegar a -1 regresándolo a 0 causando un bloqueo a números negativos
@@ -166,7 +166,7 @@ select_product_subcategory.addEventListener('change', function () {
   // Función para buscar el texto deseado desde subcategorías
   search_For();
 })      
-
+//Función para ejecutar una consulta entre la información de la tabla
 function search_For() {
   // Recorrer cada elemento tr para leer los textos 
   for (let i = 0; i < items_tr.length; i++) {
@@ -252,6 +252,7 @@ function search_For() {
   }
 }
 
+//Función para rellenar el ticket con la cantidad de productos solicitados
 function fill_Ticket(element, id) {
     let prod_id = id;
     // Capturar la información del nombre en base a la rutas específica dentro del td 
@@ -283,6 +284,7 @@ function fill_Ticket(element, id) {
     }
 }
 
+//Función para eliminar del ticket la cantidad de productos no solicitados
 function del_Ticket(id) {
   let prod_id = id;
   let ticket_order_find_li = ticket_order_list.querySelector('#' + prod_id);

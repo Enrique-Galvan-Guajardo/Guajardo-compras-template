@@ -41,11 +41,13 @@
     border-bottom: 12px solid #f5f5f5;
 }
 .toggle-table > div.product-card{
-    position: absolute;
-    left: -100%;
+    position: fixed;
+    overflow-y: auto;
     width: 100%;
-    opacity: 1;
+    left: -100%;
     top: 9rem;
+    bottom: 0;
+    opacity: 1;
     z-index: 1;
 }
 .toggle-table.open > div.product-card{
@@ -72,7 +74,7 @@
     }
     .toggle-table > div.product-card{
         width: 50vw;
-        top: 15rem;
+        top: 6rem;
     }
     .toggle-table.open > div.product-card {
         left: 10%;
